@@ -20,3 +20,14 @@ body {
   color: rgb(var(--foreground-rgb));
   background-color: black;
 }
+
+.slide-in {
+  transform: translateX(-100%); /* Initially positioned outside the screen */
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.slide-in.open {
+  transform: translateX(0%); /* Slides in from the left */
+  opacity: 1;
+}
