@@ -1,0 +1,32 @@
+{
+  "navbarLinks": {
+    "trade": "Арилжаа",
+    "platform": "Платформ",
+    "support": "Тусламж",
+    "login": "Нэвтрэх",
+    "openAccount": "Данс нээх",
+    "tradeAccount": "Арилжааны данс",
+    "market": "Зах зээл",
+    "priceSpread": "Ханш & Зөрүү",
+    "mt5": "MetaTrader 5",
+    "ctrader": "cTrader",
+    "tradingHour": "Арилжааны цаг",
+    "demoAccount": "Демо данс",
+    "contactUs": "Холбоо барих",
+    "partner": "Бидэнтэй хамтрах"
+  },
+  "footerLinks": {
+    "company": "Компани",
+    "platform": "Платформууд",
+    "links": "Холбоосууд",
+    "legal": "Эрх зүй",
+    "helpCenter": "Тусламж",
+    "partnerWithUs": "Хамтарч ажиллах",
+    "contactUs": "Холбогдох",
+    "termsAndConditions": "Үйлчилгээний нөхцөл",
+    "privacy": "Нууцлалын бодлого",
+    "openAccount": "Данс нээх",
+    "loginAccount": "Данс руу нэвтрэх",
+    "deposit": "Дансаа цэнэглэх"
+  }
+}

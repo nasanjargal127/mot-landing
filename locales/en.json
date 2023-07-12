@@ -1,0 +1,32 @@
+{
+  "navbarLinks": {
+    "trade": "Trade",
+    "platform": "Platform",
+    "support": "Support",
+    "login": "Log in",
+    "openAccount": "Open Account",
+    "tradeAccount": "Trading Account",
+    "market": "Market",
+    "priceSpread": "Price & Spread",
+    "mt5": "MetaTrader 5",
+    "ctrader": "cTrader",
+    "tradingHour": "Trading Hours",
+    "demoAccount": "Demo Account",
+    "contactUs": "Contact us",
+    "partner": "Partner with us"
+  },
+  "footerLinks": {
+    "company": "Company",
+    "platform": "Platforms",
+    "links": "Links",
+    "legal": "Legal",
+    "helpCenter": "Help Center",
+    "partnerWithUs": "Partner With Us",
+    "contactUs": "Contact Us",
+    "termsAndConditions": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "openAccount": "Open Account",
+    "loginAccount": "Login Account",
+    "deposit": "Deposit"
+  }
+}
