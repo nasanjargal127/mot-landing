@@ -21,6 +21,7 @@ body {
   background-color: black;
 }
 
+/* --------------------------------------------------- Default Animation -------------------------------------------------------- */
 .slide-in {
   transform: translateX(-100%); /* Initially positioned outside the screen */
   opacity: 0;
@@ -29,5 +30,19 @@ body {
 
 .slide-in.open {
   transform: translateX(0%); /* Slides in from the left */
+  opacity: 1;
+}
+
+.dropdown-item {
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.dropdown-item.open {
+  max-height: 200px; /* This should be large enough to contain any dropdown */
+  transform: translateY(0);
   opacity: 1;
 }

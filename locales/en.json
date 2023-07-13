@@ -15,6 +15,17 @@
     "contactUs": "Contact us",
     "partner": "Partner with us"
   },
+  "heroSection": {
+    "mainBanner": "We open non-stop 24/7 access to global market and foreign currency.",
+    "learnBanner": "Deposit 300$ and get MOTFX ACADEMY online course for free.",
+    "depositBanner": "You can deposit/withdraw very quickly using domestic banks.",
+    "cryptoBanner": "Opportunity to trade cryptocurrencies and all market opportunities at one place.",
+    "forexPair": "Forex pairs",
+    "cryptoAndStock": "Cryptos and Stocks",
+    "indexesAndCFD": "Indexes and CFDs",
+    "metalsAndEnergies": "Metals and Energies",
+    "leverage": "Leverage"
+  },
   "footerLinks": {
     "company": "Company",
     "platform": "Platforms",

@@ -13,6 +13,9 @@ module.exports = {
       },
       colors: {
         primary: "#FFA233",
+        secondary: "#0c2b41",
+        lightSecondary: "#071926",
+        customGray: "#0B2B42",
       },
       boxShadow: {
         "3xl": "0 5px 85px -15px #FFA233",
