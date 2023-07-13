@@ -26,6 +26,17 @@
     "metalsAndEnergies": "Metals and Energies",
     "leverage": "Leverage"
   },
+  "stepsSection": {
+    "title": "Follow the 4 steps below and start trading within 24 hours.",
+    "register": "Register",
+    "registerDesc": "Click the Start button and follow our easy account setup process",
+    "personalInfo": "KYC",
+    "personalInfoDesc": "Click the Start button and follow our easy account setup process",
+    "deposit": "Deposit",
+    "depositDesc": "Get ready to take advantage of the next trading opportunity",
+    "trade": "Trade",
+    "tradeDesc": "Open your trading platform and place your first trade with MOTFX"
+  },
   "riskWarning": {
     "title": "Risk warning",
     "description": "It should be noted that high leverage trading on Forex and Crypto combinations is not suitable for all traders and they carry some risk to your capital. Before trading, we recommend that you fully understand the risks involved, taking into account your investment goals and experience level, and only trade with funds that you can afford to risk. In no event shall MOTFX be liable to any person or entity in whole or in part for any loss or damage arising out of or in connection with any trading or investment."

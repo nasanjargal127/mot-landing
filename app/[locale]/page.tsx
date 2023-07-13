@@ -1,3 +1,4 @@
+import { StepsSection } from "@/src/components/layout";
 import {
   HeroSection,
   IntroSection,
@@ -16,6 +17,7 @@ export default function Home() {
       <TransactionSection />
       <PlatformSection />
       <SpreadSection />
+      <StepsSection />
     </main>
   );
 }

@@ -8,6 +8,6 @@ export const CustomStyles = {
     gradientBg: "bg-gradient-to-r from-[#FFA233] to-[#FFC81A]",
   },
   animations: {
-    hoverScale: "hover:scale-110 duration-200",
+    hoverScale: "hover:scale-105 duration-200",
   },
 };

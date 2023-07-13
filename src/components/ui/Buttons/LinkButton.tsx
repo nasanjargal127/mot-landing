@@ -17,7 +17,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ isOutlined = false, text, href,
       className={
         `${className ? className : "px-4 py-2"}` +
         (isOutlined ? " ring-2 ring-primary " : " ") +
-        "rounded-[18px] items-center font-[500] text-white"
+        "rounded-[14px] items-center font-[500] text-white"
       }
     >
       {text}

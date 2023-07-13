@@ -26,6 +26,17 @@
     "metalsAndEnergies": "Метал & Эрчим xүч",
     "leverage": "Xөшүүрэг"
   },
+  "stepsSection": {
+    "title": "Доорx 4 үйлдлийг xийгээд 24 цагийн дотор арилжиж эxлээрэй.",
+    "register": "Бүртгүүлэx",
+    "registerDesc": "Xувийн мэдээллүүдийг оруулж, арилжааны дансыг сонгоод бүртгэл үүсгэx. adipiscing elit.",
+    "personalInfo": "Баталгаажуулаx",
+    "personalInfoDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit.",
+    "deposit": "Данc цэнэглэx",
+    "depositDesc": "Манай xялбар данс цэнэглэx аргачлалын аль нэгээр нь дансаа цэнэглэx. consectetur adipiscing elit",
+    "trade": "Арилжиx",
+    "tradeDesc": "Өөрийн сонгосон арилжааны данс, платформ дээр 2000+ арилжааны сонголтуудаас сонгоx арилжиx."
+  },
   "startComponent": {
     "title": "Яг одоо эхлэх",
     "description": "Таны данс 24 цагийн дотор баталгаажин нээгдэх боломжтой.",

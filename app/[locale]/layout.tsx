@@ -36,9 +36,7 @@ async function RootLayout({ children, params }: { children: React.ReactNode; par
       <head>
         <title>{`${metadata.title}`}</title>
         <meta content={`${metadata.description}`} name="description" />
-        {/* <meta property="og:url" content={`${externalMetadata.url}${router.asPath}`} />
-        <link rel="canonical" href={`${externalMetadata.url}${router.asPath}`} /> */}
-        {/* Open Graph */}
+        {/* Open Graph
         <meta property="og:type" content={externalMetadata.type} />
         <meta property="og:site_name" content={externalMetadata.siteName} />
         <meta property="og:description" content={`${metadata.description}`} />

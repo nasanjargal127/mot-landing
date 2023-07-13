@@ -76,7 +76,7 @@ const Footer: React.FC<FooterProps> = () => {
       links: [
         {
           name: footerLinkTranslation("termsAndConditions"),
-          href: localizeHref("/pdf/GenralTermsAndCondition.pdf"),
+          href: "/pdf/GenralTermsAndCondition.pdf",
         },
         {
           name: footerLinkTranslation("privacy"),
