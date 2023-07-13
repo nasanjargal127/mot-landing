@@ -1,9 +1,21 @@
-import Image from "next/image";
+import {
+  HeroSection,
+  IntroSection,
+  LiveAccountSection,
+  PlatformSection,
+  SpreadSection,
+  TransactionSection,
+} from "@/src/sections/Home";
 
 export default function Home() {
   return (
-    <main className="flex flex-col mt-16 z-0">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">duck</div>
+    <main className="w-full">
+      <HeroSection />
+      <IntroSection />
+      <LiveAccountSection />
+      <TransactionSection />
+      <PlatformSection />
+      <SpreadSection />
     </main>
   );
 }
