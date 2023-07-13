@@ -29,15 +29,15 @@ const Footer: React.FC<FooterProps> = () => {
       links: [
         {
           name: footerLinkTranslation("helpCenter"),
-          href: "",
+          href: "https://help.motforex.com",
         },
         {
           name: footerLinkTranslation("partnerWithUs"),
-          href: "",
+          href: "/support?nextpage=partner",
         },
         {
           name: footerLinkTranslation("contactUs"),
-          href: "",
+          href: "/support?nextpage=contact-us",
         },
       ],
     },
@@ -46,11 +46,11 @@ const Footer: React.FC<FooterProps> = () => {
       links: [
         {
           name: "MetaTrader5",
-          href: "",
+          href: "/platform?nextpage=mt5",
         },
         {
           name: "cTrader",
-          href: "",
+          href: "/platform?nextpage=ctrader",
         },
       ],
     },

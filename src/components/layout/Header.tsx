@@ -105,12 +105,12 @@ const Header: React.FC<HeaderProps> = () => {
       id="navbar"
       className={
         ` w-full fixed top-0 z-50 px-2 xl:px-0 duration-300 ` +
-        (navbarVisibility > 80 || isMobileMenuOpen ? " bg-darkSecondary shadow-lg" : " backdrop-blur-md pt-4")
+        (navbarVisibility > 80 || isMobileMenuOpen ? " bg-darkSecondary shadow-lg" : " pt-3")
       }
     >
       <nav className={`${CustomStyles.container} h-[70px] flex items-center justify-between`} aria-label="Global">
         <Link href="/" className="flex lg:flex-1">
-          <Image src="/logo/motfxLogoLight.png" alt="logoImage" width="140" height="36" priority />
+          <Image src="/images/logo/motfxLogoLight.png" alt="logoImage" width="140" height="36" priority />
         </Link>
 
         <ul className="hidden md:flex flex-row gap-8 relative items-center ">

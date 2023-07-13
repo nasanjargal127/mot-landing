@@ -22,25 +22,25 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       topTitle: "MONEY",
       bottomTitle: "NEVER SLEEPS",
       desc: translation("mainBanner"),
-      image: "/swiper/mainBanner.jpg",
+      image: "/images/swiper/mainBanner.jpg",
     },
     {
       topTitle: "LEARN TO",
       bottomTitle: "EARN",
       desc: translation("learnBanner"),
-      image: "/swiper/learnBanner.jpg",
+      image: "/images/swiper/learnBanner.jpg",
     },
     {
       topTitle: "EASY",
       bottomTitle: "DEPOSIT / WITHDRAWAL",
       desc: translation("depositBanner"),
-      image: "/swiper/depositBanner.jpg",
+      image: "/images/swiper/depositBanner.jpg",
     },
     {
       topTitle: "DON’T MISS",
       bottomTitle: "ON CRYPTO",
       desc: translation("cryptoBanner"),
-      image: "/swiper/cryptoBanner.png",
+      image: "/images/swiper/cryptoBanner.png",
     },
   ];
 
@@ -64,10 +64,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        loop
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
         pagination={pagination}
         modules={[Autoplay, Pagination]}
         className="absolute isolate inset-0 h-screen w-full -z-10"
