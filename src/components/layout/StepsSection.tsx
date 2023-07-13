@@ -34,15 +34,15 @@ const StepsSection: React.FC<StepsSectionProps> = () => {
   ];
 
   return (
-    <section className={`${CustomStyles.section} pb-12 bg-darkSecondary`}>
+    <section className={`${CustomStyles.section} pb-12 bg-gradient-to-t from-darkSecondary to-[#03273f]`}>
       <div className={`${CustomStyles.container}`}>
         <div className="mx-auto max-w-3xl text-center mt-12">
           <h2 className="text-[32px] font-extrabold leading-9 text-white sm:text-4xl">{translation("title")}</h2>
         </div>
         <ScrollAnimationWrapper className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 pt-12">
           {stepsData.map((item) => (
-            <motion.div key={item.id} className="h-[180px] flex flex-row justify-start overflow-visible">
-              <div className="text-[220px] leading-[180px] text-transparent bg-clip-text bg-gradient-to-t from-darkSecondary to-[#03273f] font-bold">
+            <motion.div key={item.id} className="h-[190px] flex flex-row justify-start overflow-visible">
+              <div className="text-[220px] leading-[190px] text-transparent bg-clip-text bg-gradient-to-t from-[#020d18] to-[#032d49] font-bold">
                 {item.id}
               </div>
               <div className={`h-full flex flex-col justify-between py-3`}>

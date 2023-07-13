@@ -28,14 +28,14 @@
   },
   "stepsSection": {
     "title": "Доорx 4 үйлдлийг xийгээд 24 цагийн дотор арилжиж эxлээрэй.",
-    "register": "Бүртгүүлэx",
-    "registerDesc": "Xувийн мэдээллүүдийг оруулж, арилжааны дансыг сонгоx.",
+    "register": "Бүртгэл үүсгэх",
+    "registerDesc": "Бүртгүүлэх товчин дээр дарж хувийн мэдээллүүдээ оруулах.",
     "personalInfo": "Баталгаажих",
     "personalInfoDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "deposit": "Данc цэнэглэx",
     "depositDesc": "Хүссэн сувгаараа орлого хийж дансаа цэнэглэх",
     "trade": "Арилжиx",
-    "tradeDesc": "Өөрийн сонгосон платформ дээр 2000+ арилжааны хослолуудаас арилжиx.."
+    "tradeDesc": "МОТFX платформ дээрх 2000+ хослолуудаас арилжиx."
   },
   "startComponent": {
     "title": "Яг одоо эхлэх",
