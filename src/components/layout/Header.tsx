@@ -113,7 +113,7 @@ const Header: React.FC<HeaderProps> = () => {
           <Image src="/logo/motfxLogoLight.png" alt="logoImage" width="140" height="36" priority />
         </Link>
 
-        <ul className="hidden relative items-center md:flex flex-row gap-8">
+        <ul className="hidden md:flex flex-row gap-8 relative items-center ">
           {navbarRoutes.map((item, idx) => {
             return (
               <NavbarListItem key={idx} link={item.href} label={item.name}>
@@ -123,12 +123,12 @@ const Header: React.FC<HeaderProps> = () => {
           })}
         </ul>
 
-        <div className="flex lg:flex-1 justify-end items-center gap-4">
-          <Link className=" font-medium hover:text-primary pr-1" href={BrokerAuthLinks.login}>
+        <div className="flex lg:flex-1 justify-end items-center gap-1 md:gap-4">
+          <Link className=" font-medium hover:text-primary pr-1 hidden md:flex" href={BrokerAuthLinks.login}>
             {navbarContent("login")}
           </Link>
           <LinkButton
-            className={`px-4 py-2 text-sm duration-200 hover:bg-primary hover:text-black`}
+            className={`px-4 py-2 text-sm duration-200 hover:bg-primary hover:text-black hidden md:flex`}
             href={BrokerAuthLinks.register}
             isOutlined
             text={navbarContent("openAccount")}
