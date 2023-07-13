@@ -12,7 +12,7 @@ import { usePathname } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa";
 import { BsCaretDownFill, BsFillPersonCheckFill } from "react-icons/bs";
 import { MdLogin } from "react-icons/md";
-import { LanguageContext } from "../utils";
+import { LanguageContext, localizeHref } from "../utils";
 import LinkButton from "../ui/Buttons/LinkButton";
 
 type HeaderProps = {};
@@ -109,7 +109,7 @@ const Header: React.FC<HeaderProps> = () => {
       }
     >
       <nav className={`${CustomStyles.container} h-[70px] flex items-center justify-between`} aria-label="Global">
-        <Link href="/" className="flex lg:flex-1">
+        <Link href={localizeHref("/")} className="flex lg:flex-1">
           <Image src="/images/logo/motfxLogoLight.png" alt="logoImage" width="140" height="36" priority />
         </Link>
 
@@ -124,7 +124,7 @@ const Header: React.FC<HeaderProps> = () => {
         </ul>
 
         <div className="flex lg:flex-1 justify-end items-center gap-1 md:gap-4">
-          <Link className=" font-medium hover:text-primary pr-1 hidden md:flex" href={BrokerAuthLinks.login}>
+          <Link className="font-medium hover:text-primary pr-1 hidden md:flex" href={BrokerAuthLinks.login}>
             {navbarContent("login")}
           </Link>
           <LinkButton
@@ -167,7 +167,7 @@ function NavbarListItem({ link, label, children }: { link: string; label: string
 
   return (
     <li className={`relative flex flex-row items-center ${children ? "group" : ""} h-[70px]`}>
-      <Link className={linkStyles(isActive)} href={link} target={link.includes("https") ? "_blank" : ""}>
+      <Link className={linkStyles(isActive)} href={localizeHref(link)} target={link.includes("https") ? "_blank" : ""}>
         {label}
       </Link>
       <BsCaretDownFill className={caretStyles(isActive)} size={12} />
@@ -188,7 +188,7 @@ function DropMenu({ items, navbarVisibility }: { items: SublinksProps[]; navbarV
         {items.map((subitem, index) => {
           return (
             <li key={index} className="mb-2 text-slate-200 hover:text-primary">
-              <Link href={subitem.href} className="w-fit text-sm ">
+              <Link href={localizeHref(subitem.href)} className="w-fit text-sm ">
                 {subitem.name}
               </Link>
             </li>
@@ -260,7 +260,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navbarRoutes, login
                       {item.sublinks.map((sublink, subIdx) => (
                         <Link
                           key={subIdx}
-                          href={sublink.href}
+                          href={localizeHref(sublink.href)}
                           className={`-ml-3 block  pl-6 font-[200] text-md leading-8 hover:text-primary text-gray-400 dropdown-item ${
                             openDropdown === idx ? "open py-2" : ""
                           }`}

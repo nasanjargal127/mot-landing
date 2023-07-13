@@ -8,11 +8,12 @@ import {
   RiYoutubeFill,
 } from "react-icons/ri";
 import { CustomStyles } from "@/src/styles/styles";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { MdMailOutline } from "react-icons/md";
+import { localizeHref } from "../utils";
 
 type FooterProps = {};
 
@@ -22,22 +23,21 @@ const Footer: React.FC<FooterProps> = () => {
   const footerLinkTranslation = useTranslations("footerLinks");
   const riskWarningTranslation = useTranslations("riskWarning");
   const infotTranslation = useTranslations("infos");
-
   const FooterLinks = [
     {
       title: footerLinkTranslation("company"),
       links: [
         {
           name: footerLinkTranslation("helpCenter"),
-          href: "https://help.motforex.com",
+          href: localizeHref("https://help.motforex.com"),
         },
         {
           name: footerLinkTranslation("partnerWithUs"),
-          href: "/support?nextpage=partner",
+          href: localizeHref("/support?nextpage=partner"),
         },
         {
           name: footerLinkTranslation("contactUs"),
-          href: "/support?nextpage=contact-us",
+          href: localizeHref("/support?nextpage=contact-us"),
         },
       ],
     },
@@ -46,11 +46,11 @@ const Footer: React.FC<FooterProps> = () => {
       links: [
         {
           name: "MetaTrader5",
-          href: "/platform?nextpage=mt5",
+          href: localizeHref("/platform?nextpage=mt5"),
         },
         {
           name: "cTrader",
-          href: "/platform?nextpage=ctrader",
+          href: localizeHref("/platform?nextpage=ctrader"),
         },
       ],
     },
@@ -59,15 +59,15 @@ const Footer: React.FC<FooterProps> = () => {
       links: [
         {
           name: footerLinkTranslation("openAccount"),
-          href: "",
+          href: localizeHref("https://portal.motforex.com/auth/register"),
         },
         {
           name: footerLinkTranslation("loginAccount"),
-          href: "",
+          href: localizeHref("https://portal.motforex.com/auth/login"),
         },
         {
           name: footerLinkTranslation("deposit"),
-          href: "",
+          href: localizeHref("https://portal.motforex.com/deposit"),
         },
       ],
     },
@@ -76,11 +76,11 @@ const Footer: React.FC<FooterProps> = () => {
       links: [
         {
           name: footerLinkTranslation("termsAndConditions"),
-          href: "",
+          href: localizeHref("/pdf/GenralTermsAndCondition.pdf"),
         },
         {
           name: footerLinkTranslation("privacy"),
-          href: "",
+          href: localizeHref("/privacy-policy"),
         },
       ],
     },

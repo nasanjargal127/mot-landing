@@ -34,9 +34,9 @@ const ReadyToStartSection: React.FC<ReadyToStartSectionProps> = () => {
           <LinkButton
             isOutlined
             className={`${CustomStyles.animations.hoverScale} h-[42px] px-4 duration-200 hidden md:flex`}
-            href="/platform"
+            href={`/platform?nextpage=mt5`}
             text={t("tryForDemo")}
-          ></LinkButton>
+          />
         </div>
       </div>
     </section>
