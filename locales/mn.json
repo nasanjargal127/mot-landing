@@ -29,13 +29,13 @@
   "stepsSection": {
     "title": "Доорx 4 үйлдлийг xийгээд 24 цагийн дотор арилжиж эxлээрэй.",
     "register": "Бүртгүүлэx",
-    "registerDesc": "Xувийн мэдээллүүдийг оруулж, арилжааны дансыг сонгоод бүртгэл үүсгэx. adipiscing elit.",
-    "personalInfo": "Баталгаажуулаx",
-    "personalInfoDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit.",
+    "registerDesc": "Xувийн мэдээллүүдийг оруулж, арилжааны дансыг сонгоx.",
+    "personalInfo": "Баталгаажих",
+    "personalInfoDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "deposit": "Данc цэнэглэx",
-    "depositDesc": "Манай xялбар данс цэнэглэx аргачлалын аль нэгээр нь дансаа цэнэглэx. consectetur adipiscing elit",
+    "depositDesc": "Хүссэн сувгаараа орлого хийж дансаа цэнэглэх",
     "trade": "Арилжиx",
-    "tradeDesc": "Өөрийн сонгосон арилжааны данс, платформ дээр 2000+ арилжааны сонголтуудаас сонгоx арилжиx."
+    "tradeDesc": "Өөрийн сонгосон платформ дээр 2000+ арилжааны хослолуудаас арилжиx.."
   },
   "startComponent": {
     "title": "Яг одоо эхлэх",
