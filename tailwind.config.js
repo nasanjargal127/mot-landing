@@ -13,8 +13,8 @@ module.exports = {
       },
       colors: {
         primary: "#FFA233",
-        secondary: "#0c2b41",
-        lightSecondary: "#071926",
+        secondary: "#071e2c",
+        lightSecondary: "#02090D",
         customGray: "#0B2B42",
       },
       boxShadow: {

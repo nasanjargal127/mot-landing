@@ -104,16 +104,16 @@ const Header: React.FC<HeaderProps> = () => {
     <header
       id="navbar"
       className={
-        ` w-full fixed top-0 z-30 px-2 xl:px-0 ` +
-        (navbarVisibility > 80 || isMobileMenuOpen ? " bg-lightSecondary shadow-lg" : " backdrop-blur-md")
+        ` w-full fixed top-0 z-50 px-2 xl:px-0 duration-300 ` +
+        (navbarVisibility > 80 || isMobileMenuOpen ? " bg-lightSecondary shadow-lg" : " backdrop-blur-md pt-4")
       }
     >
-      <nav className={`${CustomStyles.container} h-16 flex items-center justify-between`} aria-label="Global">
+      <nav className={`${CustomStyles.container} h-[70px] flex items-center justify-between`} aria-label="Global">
         <Link href="/" className="flex lg:flex-1">
           <Image src="/logo/motfxLogoLight.png" alt="logoImage" width="140" height="36" priority />
         </Link>
 
-        <ul className="hidden relative items-center md:flex flex-row gap-6">
+        <ul className="hidden relative items-center md:flex flex-row gap-8">
           {navbarRoutes.map((item, idx) => {
             return (
               <NavbarListItem key={idx} link={item.href} label={item.name}>
@@ -124,7 +124,7 @@ const Header: React.FC<HeaderProps> = () => {
         </ul>
 
         <div className="flex lg:flex-1 justify-end items-center gap-4">
-          <Link className="text-sm font-semibold hover:text-primary pr-1" href={BrokerAuthLinks.login}>
+          <Link className=" font-medium hover:text-primary pr-1" href={BrokerAuthLinks.login}>
             {navbarContent("login")}
           </Link>
           <LinkButton
@@ -152,30 +152,26 @@ const Header: React.FC<HeaderProps> = () => {
 export default Header;
 
 // --------------------------------------------- Navbar Item-----------------------------------------------
+const linkStyles = (isActive: boolean) =>
+  `${
+    isActive ? "text-primary " : " "
+  }text-base font-light cursor-pointer flex items-center  h-full hover:text-primary dark:hover:text-darkPrimary`;
+
+const caretStyles = (isActive: boolean) =>
+  `${
+    isActive ? "text-primary" : " "
+  } text-lightText ml-0.5 mt-0.5 group-hover:rotate-180 duration-300 group-hover:text-primary`;
+
 function NavbarListItem({ link, label, children }: { link: string; label: string; children?: ReactNode }) {
   const pathname = usePathname();
   const isActive = pathname.toString().includes(link);
 
   return (
-    <li className={`relative flex flex-row items-center ${children ? "group" : ""} h-16`}>
-      <Link
-        className={
-          (isActive ? "text-primary " : " ") +
-          "text-base font-[400] cursor-pointer flex items-center  h-full " +
-          " hover:text-primary dark:hover:text-darkPrimary  "
-        }
-        href={link}
-        target={link.includes("https") ? "_blank" : ""}
-      >
+    <li className={`relative flex flex-row items-center ${children ? "group" : ""} h-[70px]`}>
+      <Link className={linkStyles(isActive)} href={link} target={link.includes("https") ? "_blank" : ""}>
         {label}
       </Link>
-      <BsCaretDownFill
-        className={
-          (isActive ? "text-primary" : " ") +
-          " text-lightText ml-0.5 mt-1 group-hover:rotate-180 duration-300 group-hover:text-primary "
-        }
-        size={12}
-      />
+      <BsCaretDownFill className={caretStyles(isActive)} size={12} />
       {children}
     </li>
   );
@@ -186,10 +182,10 @@ function DropMenu({ items, navbarVisibility }: { items: SublinksProps[]; navbarV
     <div
       className={
         (navbarVisibility ? " bg-secondary " : "  ") +
-        "absolute top-full -left-5 py-3 px-6 hidden group-hover:flex flex-col rounded-b-xl"
+        "absolute top-full z-10 -left-5 py-3 px-6 hidden group-hover:flex flex-col rounded-b-xl duration-200"
       }
     >
-      <ul className="w-36">
+      <ul className="w-32 ">
         {items.map((subitem, index) => {
           return (
             <li key={index} className="mb-2 text-slate-200 hover:text-primary">
