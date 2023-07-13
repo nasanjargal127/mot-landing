@@ -4,4 +4,10 @@ export const CustomStyles = {
   button: {
     linkButton: "py-1.5 px-4",
   },
+  backgrounds: {
+    gradientBg: "bg-gradient-to-r from-[#FFA233] to-[#FFC81A]",
+  },
+  animations: {
+    hoverScale: "hover:scale-110 duration-200",
+  },
 };

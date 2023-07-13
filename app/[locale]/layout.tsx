@@ -1,4 +1,4 @@
-import { Footer, Header } from "@/src/components/layout";
+import { Footer, Header, ReadyToStartSection } from "@/src/components/layout";
 import "../../src/styles/globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
@@ -58,6 +58,7 @@ async function RootLayout({ children, params }: { children: React.ReactNode; par
         <NextIntlClientProvider locale={params.locale} messages={messages}>
           <Header />
           {children}
+          <ReadyToStartSection />
           <Footer />
         </NextIntlClientProvider>
       </body>

@@ -26,6 +26,20 @@
     "metalsAndEnergies": "Metals and Energies",
     "leverage": "Leverage"
   },
+  "riskWarning": {
+    "title": "Risk warning",
+    "description": "It should be noted that high leverage trading on Forex and Crypto combinations is not suitable for all traders and they carry some risk to your capital. Before trading, we recommend that you fully understand the risks involved, taking into account your investment goals and experience level, and only trade with funds that you can afford to risk. In no event shall MOTFX be liable to any person or entity in whole or in part for any loss or damage arising out of or in connection with any trading or investment."
+  },
+  "startComponent": {
+    "title": "Start trading",
+    "description": "Your account will undergo verification within the next 24 hours.",
+    "btnText": "Register",
+    "tryForDemo": "Try a Demo account"
+  },
+  "infos": {
+    "address": "Address: 905th, 9th floor, Shangri-La office,Olympic street, 1st khoroo, Sukhbaatar district, Ulaanbaatar, Mongolia",
+    "info": "'MOT FORE' LLC has a license to conduct official activities in Mongolia and is regulated by the Financial Regulatory Commission under the number 000263576. /Register number: 6960332/"
+  },
   "footerLinks": {
     "company": "Company",
     "platform": "Platforms",

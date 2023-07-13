@@ -105,7 +105,7 @@ const Header: React.FC<HeaderProps> = () => {
       id="navbar"
       className={
         ` w-full fixed top-0 z-50 px-2 xl:px-0 duration-300 ` +
-        (navbarVisibility > 80 || isMobileMenuOpen ? " bg-lightSecondary shadow-lg" : " backdrop-blur-md pt-4")
+        (navbarVisibility > 80 || isMobileMenuOpen ? " bg-darkSecondary shadow-lg" : " backdrop-blur-md pt-4")
       }
     >
       <nav className={`${CustomStyles.container} h-[70px] flex items-center justify-between`} aria-label="Global">
@@ -136,7 +136,6 @@ const Header: React.FC<HeaderProps> = () => {
           <LanguageContext />
           <BarIcon isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
         </div>
-        {/* ------------------------------- hamburger button ---------------------------------- */}
       </nav>
       <MobileMenu
         isMobileMenuOpen={isMobileMenuOpen}
@@ -305,7 +304,6 @@ const BarIcon = ({ isMobileMenuOpen, setIsMobileMenuOpen }: BarIconProps) => {
     <div
       className="z-50 m-4 flex relative w-6 h-5 flex-col justify-between cursor-pointer items-center md:hidden"
       onClick={() => {
-        console.log("HI");
         setIsMobileMenuOpen(!isMobileMenuOpen);
       }}
     >
