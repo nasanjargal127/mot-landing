@@ -12,7 +12,9 @@ import { usePathname } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa";
 import { BsCaretDownFill, BsFillPersonCheckFill } from "react-icons/bs";
 import { MdLogin } from "react-icons/md";
-import { LanguageContext, localizeHref } from "../utils";
+import { LanguageContext } from "../utils";
+import { localizeHref } from "../utils/LocalizeHref";
+
 import LinkButton from "../ui/Buttons/LinkButton";
 
 type HeaderProps = {};

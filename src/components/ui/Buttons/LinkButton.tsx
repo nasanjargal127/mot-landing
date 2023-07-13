@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { ReactNode } from "react";
-import { localizeHref } from "../../utils";
+import { localizeHref } from "../../utils/LocalizeHref";
 
 type LinkButtonProps = {
   isOutlined?: boolean;

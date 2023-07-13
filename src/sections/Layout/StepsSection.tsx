@@ -4,7 +4,8 @@ import React from "react";
 import { CustomStyles } from "@/src/styles/styles";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ScrollAnimationWrapper } from "../utils";
+import { ScrollAnimationWrapper } from "../../components/utils";
+import { scrollAnimation } from "@/src/constants/motion.variant";
 
 type StepsSectionProps = {};
 
@@ -41,7 +42,12 @@ const StepsSection: React.FC<StepsSectionProps> = () => {
         </div>
         <ScrollAnimationWrapper className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 pt-12">
           {stepsData.map((item) => (
-            <motion.div key={item.id} className="h-[190px] flex flex-row justify-start overflow-visible">
+            <motion.div
+              key={item.id}
+              custom={{ duration: item.id }}
+              className="h-[190px] flex flex-row justify-start overflow-visible"
+              variants={scrollAnimation}
+            >
               <div className="text-[220px] leading-[190px] text-transparent bg-clip-text bg-gradient-to-t from-[#020d18] to-[#032d49] font-bold">
                 {item.id}
               </div>

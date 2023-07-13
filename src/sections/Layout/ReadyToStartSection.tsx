@@ -4,7 +4,7 @@ import React from "react";
 import { CustomStyles } from "@/src/styles/styles";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { Button, LinkButton } from "../ui/Buttons";
+import { Button, LinkButton } from "../../components/ui/Buttons";
 
 type ReadyToStartSectionProps = {};
 
@@ -13,7 +13,7 @@ const ReadyToStartSection: React.FC<ReadyToStartSectionProps> = () => {
   const t = useTranslations("startComponent");
 
   return (
-    <section className={`${CustomStyles.section} bg-darkSecondary py-16`}>
+    <section className={`${CustomStyles.section} bg-darkSecondary py-20`}>
       <div
         style={{ boxShadow: "0px 4px 35px 0px #FFA233" }}
         className={`${CustomStyles.container} relative py-12 px-2 flex flex-col gap-6 rounded-3xl p-4 justify-center items-center `}

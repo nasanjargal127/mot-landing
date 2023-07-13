@@ -1,4 +1,3 @@
-import { StepsSection } from "@/src/components/layout";
 import {
   HeroSection,
   IntroSection,
@@ -7,6 +6,7 @@ import {
   SpreadSection,
   TransactionSection,
 } from "@/src/sections/Home";
+import { StepsSection } from "@/src/sections/Layout";
 
 export default function Home() {
   return (

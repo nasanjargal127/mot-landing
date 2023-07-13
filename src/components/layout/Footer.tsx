@@ -13,7 +13,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { MdMailOutline } from "react-icons/md";
-import { localizeHref } from "../utils";
+import { localizeHref } from "../utils/LocalizeHref";
 
 type FooterProps = {};
 
@@ -109,7 +109,6 @@ const Footer: React.FC<FooterProps> = () => {
     },
   ];
 
-  console.log(pathname);
   return (
     <footer
       id="footer"
