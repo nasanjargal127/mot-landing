@@ -40,7 +40,7 @@ const StepsSection: React.FC<StepsSectionProps> = () => {
         <div className="mx-auto max-w-3xl text-center mt-12">
           <h2 className="text-[32px] font-extrabold leading-9 text-white sm:text-4xl">{translation("title")}</h2>
         </div>
-        <ScrollAnimationWrapper className="grid grid-cols-1 gap-8 xs:grid-cols-2 lg:grid-cols-4 pt-12">
+        <ScrollAnimationWrapper className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 pt-12">
           {stepsData.map((item) => (
             <motion.div
               key={item.id}
@@ -48,12 +48,12 @@ const StepsSection: React.FC<StepsSectionProps> = () => {
               className="h-[190px] flex flex-row justify-start overflow-visible"
               variants={scrollAnimation}
             >
-              <div className="text-[220px] leading-[190px] text-transparent bg-clip-text bg-gradient-to-t from-[#020d18] to-[#032d49] font-bold">
+              <div className="text-[220px] leading-[190px] text-transparent bg-clip-text bg-gradient-to-t from-[#041a2f] to-[#043c62] font-bold">
                 {item.id}
               </div>
-              <div className={`h-full flex flex-col justify-between py-3`}>
-                <h3 className="text-2xl xs:text-xl md:text-2xl lg:text-xl font-extrabold text-primary">{item.title}</h3>
-                <dd className="text-lg xs:text-base sm:text-lg md:text-xl lg:text-base xl:text-lg font-light text-slate-400 ">
+              <div className={`h-full flex flex-col justify-start py-3`}>
+                <h3 className="text-2xl xs:3xl md:text-2xl lg:text-xl font-extrabold text-primary">{item.title}</h3>
+                <dd className="text-lg mt-4 xs:text-xl  sm:text-lg md:text-xl lg:text-base xl:text-lg font-light text-slate-400 ">
                   {item.description}
                 </dd>
               </div>

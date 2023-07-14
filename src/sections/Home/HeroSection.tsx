@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../../styles/swiperStyles.css";
 import { CustomStyles } from "@/src/styles/styles";
+import Image from "next/image";
 
 type HeroSectionProps = {};
 
@@ -75,8 +76,12 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       >
         {HeroSwiperData.map((item, idx) => (
           <SwiperSlide key={idx}>
-            <img
+            <Image
               src={item.image}
+              alt="banner image"
+              width={0}
+              height={0}
+              sizes="100vw"
               className="absolute isolate inset-0 -z-10 h-screen w-full object-cover object-center md:object-center brightness-40"
             />
             <div

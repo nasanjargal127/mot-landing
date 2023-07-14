@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionContainer } from "@/src/components/layout";
 import { CustomStyles } from "@/src/styles/styles";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
@@ -46,9 +47,9 @@ const IntroSection: React.FC<IntroSectionProps> = () => {
   // ];
 
   return (
-    <section className={`${CustomStyles.section} bg-white py-16 sm:py-24`}>
-      <div className={`${CustomStyles.container}`}></div>
-    </section>
+    <SectionContainer sectionClassName=" bg-white py-16 sm:py-24">
+      <span>hi</span>
+    </SectionContainer>
   );
 };
 export default IntroSection;
