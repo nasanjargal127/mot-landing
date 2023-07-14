@@ -12,8 +12,7 @@ import { usePathname } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa";
 import { BsCaretDownFill, BsFillPersonCheckFill } from "react-icons/bs";
 import { MdLogin } from "react-icons/md";
-import { LanguageContext } from "../utils";
-import { localizeHref } from "../utils/LocalizeHref";
+import { LanguageContext, useLocalizeHref } from "../utils";
 
 import LinkButton from "../ui/Buttons/LinkButton";
 
@@ -40,6 +39,7 @@ const Header: React.FC<HeaderProps> = () => {
 
   const { scrollY } = useScroll();
   const navbarContent = useTranslations("navbarLinks");
+  const localizeHref = useLocalizeHref();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setNavbarVisibility(latest);
@@ -166,6 +166,7 @@ const caretStyles = (isActive: boolean) =>
 function NavbarListItem({ link, label, children }: { link: string; label: string; children?: ReactNode }) {
   const pathname = usePathname();
   const isActive = pathname.toString().includes(link);
+  const localizeHref = useLocalizeHref();
 
   return (
     <li className={`relative flex flex-row items-center ${children ? "group" : ""} h-[70px]`}>
@@ -179,6 +180,8 @@ function NavbarListItem({ link, label, children }: { link: string; label: string
 }
 
 function DropMenu({ items, navbarVisibility }: { items: SublinksProps[]; navbarVisibility: boolean }) {
+  const localizeHref = useLocalizeHref();
+
   return (
     <div
       className={
@@ -218,6 +221,7 @@ const slideInAnimation = {
 
 const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navbarRoutes, loginText, register }: MobileMenuProps) => {
   const [openDropdown, setOpenDropdown] = useState<null | number>(null);
+  const localizeHref = useLocalizeHref();
 
   return (
     <AnimatePresence>

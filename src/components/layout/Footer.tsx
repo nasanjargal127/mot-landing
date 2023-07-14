@@ -1,4 +1,5 @@
 "use client";
+
 import {
   RiFacebookCircleFill,
   RiTelegramFill,
@@ -10,19 +11,18 @@ import {
 import { CustomStyles } from "@/src/styles/styles";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
 import { MdMailOutline } from "react-icons/md";
-import { localizeHref } from "../utils/LocalizeHref";
+import { useLocalizeHref } from "../utils";
 
 type FooterProps = {};
 
 const Footer: React.FC<FooterProps> = () => {
-  const pathname = usePathname();
-
   const footerLinkTranslation = useTranslations("footerLinks");
   const riskWarningTranslation = useTranslations("riskWarning");
   const infotTranslation = useTranslations("infos");
+  const localizeHref = useLocalizeHref();
+
   const FooterLinks = [
     {
       title: footerLinkTranslation("company"),

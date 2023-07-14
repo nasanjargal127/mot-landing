@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { ReactNode } from "react";
-import { localizeHref } from "../../utils/LocalizeHref";
+import { useLocalizeHref } from "../../utils";
 
 type LinkButtonProps = {
   isOutlined?: boolean;
@@ -11,6 +11,8 @@ type LinkButtonProps = {
 };
 
 const LinkButton: React.FC<LinkButtonProps> = ({ isOutlined = false, text, href, className, children }) => {
+  const localizeHref = useLocalizeHref();
+
   return (
     <Link
       href={localizeHref(href)}
