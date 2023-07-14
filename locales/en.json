@@ -26,6 +26,25 @@
     "metalsAndEnergies": "Metals and Energies",
     "leverage": "Leverage"
   },
+  "featureSection": {
+    "btnText": "Learn more",
+    "title": "Why",
+    "motfx": "MOTFX?",
+    "gej": "",
+    "description": "We have established the first real Forex and stock trading broker in Mongolia and created a trading bridge for Mongolian traders that connects them directly to the global market, eliminating the need to use foreign brokers and export dollars",
+    "lowCommission": "Lowest commission",
+    "lowCommissionDesc": "Minimum Spread and Commission. Spread for Pro account starts from 0.00.",
+    "fastestTrade": "Fastest trading execution",
+    "fastestTradeDesc": "Your trade will be executed in 15 milliseconds.",
+    "easistDepoWith": "Easiest Deposit/Withdrawal",
+    "easistDepoWithDesc": "Use local banks to quickly top up your account and spend as quickly as possible",
+    "cryptoDepoWith": "Crypto Deposit/Withdrawal",
+    "cryptoDepoWithDesc": "You can deposit and withdraw quickly using cryptocurrency.",
+    "flexibleLeverage": "Flexible leverage",
+    "flexibleLeverageDesc": "It is possible to trade by choosing leverage up to 1:500",
+    "tradingOptions": "Best and Most trading options",
+    "tradingOptionsDesc": "From company stocks to foreign currencies, precious metals, oil, indices, cryptocurrencies, etc, there are 1000+ trading options."
+  },
   "liveAccounts": {
     "titlePrefix": "Live",
     "titleSuffix": "accounts",

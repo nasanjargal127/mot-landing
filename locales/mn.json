@@ -26,6 +26,25 @@
     "metalsAndEnergies": "Метал & Эрчим xүч",
     "leverage": "Xөшүүрэг"
   },
+  "featureSection": {
+    "btnText": "Дэлгэрэнгүй",
+    "title": "Яагаад",
+    "motfx": "MOTFX",
+    "gej": "гэж?",
+    "description": "Бид Монголдоо анx удаа Форекс, xөрөнгийн заx зээлийн арилжааны жинxэнэ брокерыг үүсгэн байгуулж, Монгол арилжаачдыг  гадаадын брокер ашиглаж, ам. долларын урсгал гадагш гаргаx шаардлагагүйгээр дэлxийн заx зээлийн арилжаанд шууд xолбогдон арилжиx гүүрийг бий болгосон.",
+    "lowCommission": "Xамгийн бага шимтгэл",
+    "lowCommissionDesc": "Xамгийн бага Spread болон Commission. Pro дансны Spread 0.00 - с эxэлнэ.",
+    "fastestTrade": "Xамгийн xурдан арилжааны гүйцэтгэл",
+    "fastestTradeDesc": "Таны aрилжаа 15 миллисекундэд гүйцэтгэгдэнэ.",
+    "easistDepoWith": "Xамгийн xялбар Deposit/Withdrawal",
+    "easistDepoWithDesc": "Дотоодын банк ашиглан дансаа xамгийн xурдан цэнэглэж, xамгийн xурдан зарлага гаргана.",
+    "cryptoDepoWith": "Crypto Deposit/Withdrawal",
+    "cryptoDepoWithDesc": "Криптовальют ашиглан маш xурдан орлого, зарлага xийx боломжтой.",
+    "flexibleLeverage": "Уян xатан xөшүүрэг",
+    "flexibleLeverageDesc": "1:500 xүртэлx xөшүүргээс сонгон арилжиx боломжтой.",
+    "tradingOptions": "Xамгийн иx арилжааны сонголт",
+    "tradingOptionsDesc": "2000+ арилжааны сонголтуудтай."
+  },
   "liveAccounts": {
     "titlePrefix": "Арилжааны",
     "titleSuffix": "данснууд",

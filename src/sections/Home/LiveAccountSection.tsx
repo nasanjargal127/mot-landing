@@ -27,22 +27,22 @@ const LiveAccountSection: React.FC<LiveAccountSectionProps> = () => {
             <Button>{translation("registerBtnText")}</Button>
           </div>
         </motion.div>
-        <div className="flex justify-center lg:pt-2 gap-4 w-full lg:flex-1 items-center ">
+        <div className="flex justify-center lg:pt-2 gap-8 w-full lg:flex-1 items-center ">
           <AccountCard
             idx={1}
             img="/images/pic/pro.jpg"
-            name="Pro account"
+            name={translation("proAcc")}
             platform="MT5, cTrader"
-            commision="0.0"
-            spread="Starts from 0.00"
+            commision="5"
+            spread="Starts from 0.0"
           />
           <AccountCard
             idx={2}
             img="/images/pic/standard.jpg"
-            name="Standard account"
+            name={translation("standardAcc")}
             platform="MT5"
-            commision="0.0"
-            spread="0.00"
+            commision="0"
+            spread="Starts from 0.3"
           />
         </div>
       </ScrollAnimationWrapper>
@@ -67,9 +67,17 @@ function AccountCard({ idx, img, name, commision, spread, platform, link }: Acco
     <motion.div
       variants={scrollAnimation}
       custom={{ duration: idx * 2 }}
-      className="max-w-sm border-[2px] border-primary rounded-2xl primary-glow overflow-hidden flex-1 "
+      whileHover={{
+        scale: 1.05,
+        transition: { duration: 0.35 },
+        boxShadow: "0px 0px 8px rgba(255, 162, 51, 0.5)",
+      }}
+      className={
+        `max-w-sm border-[2px] rounded-2xl overflow-hidden flex-1 ` +
+        (idx % 2 !== 0 ? " primary-glow border-primary" : " border-darkText ")
+      }
     >
-      <Image src={img} alt="item" width={560} height={200} sizes="100%" className="object-fit" />
+      <Image src={img} alt="item" width={560} height={180} sizes="100%" className="object-fit" />
       <div className="flex flex-col mx-8 my-6">
         <div className="text-white text-center text-[28px] font-bold z-10 mb-2">{name}</div>
         <div className="my-3 border-t border-white/10  lg:flex lg:items-center lg:justify-between " />
@@ -79,7 +87,7 @@ function AccountCard({ idx, img, name, commision, spread, platform, link }: Acco
         </InfoRows>
         <InfoRows>
           <p className="font-bold text-slate-300">{translation("commission")}:</p>
-          <p>{commision}</p>
+          <p>{commision} $</p>
         </InfoRows>
         <InfoRows>
           <p className="font-bold text-slate-300">{translation("spread")}:</p>
