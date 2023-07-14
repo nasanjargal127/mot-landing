@@ -25,8 +25,8 @@ const TransactionSection: React.FC<TransactionSectionProps> = () => {
   ];
 
   return (
-    <SectionContainer sectionClassName="py-32 bg-white">
-      <GrayContainer className="py-12 px-3 xn:px-6 lg:px-12 xl:justify-between">
+    <SectionContainer sectionClassName="py-28 bg-white">
+      <GrayContainer className="py-12 px-2 lg:px-12 xl:justify-between">
         <div className="flex flex-col max-w-xl md:flex-1">
           <span className="flex flex-row flex-wrap">
             <h2 className={`${CustomStyles.text.title} text-customGray`}>{translation("titlePrefix")}</h2>
@@ -41,7 +41,7 @@ const TransactionSection: React.FC<TransactionSectionProps> = () => {
             <IconText title={translation("item3")} />
           </div>
           <Button
-            className={`"font-semibold mt-8 md:w-fit " + ${CustomStyles.animations.hoverScale}`}
+            className={`" font-semibold mt-8 md:w-fit  px-5 ${CustomStyles.animations.hoverScale}`}
             onClick={() => router.push("https://portal.motforex.com/deposit")}
           >
             {translation("btnText")}
@@ -49,7 +49,6 @@ const TransactionSection: React.FC<TransactionSectionProps> = () => {
         </div>
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 gap-8 md:flex-1 md:max-w-xs">
           {paymentLogos.map((item, idx) => {
-            console.log(item);
             return <PaymentLogoItem img={item} custom={idx + 1} key={idx} />;
           })}
         </div>

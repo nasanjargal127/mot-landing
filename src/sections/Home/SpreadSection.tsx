@@ -67,10 +67,10 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
   const TradePairs = response ? updateTradePairs(TRADEPAIRS, response) : TRADEPAIRS;
 
   return (
-    <SectionContainer sectionClassName="bg-white" divClassname="py-32">
-      <GrayContainer className="py-12 px-3 xn:px-6 lg:px-12 ">
-        <div className="lg:mr-8 overflow-x-auto lg:flex-1">
-          <div className="w-fit flow-root rounded-md shadow-md  bg-white">
+    <SectionContainer sectionClassName="bg-white" divClassname="py-28">
+      <GrayContainer className="py-12 px-2 lg:px-12 ">
+        <div className="lg:mr-8 overflow-x-auto shadow-lg xl:shadow-none lg:flex-1">
+          <div className="w-fit flow-root rounded-md bg-white xl:shadow-lg ">
             <div className="flex pl-4 sm:justify-start">
               {pairTypes.map((item, idx) => (
                 <p
@@ -128,7 +128,7 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
             <p className="my-8 text-lg text-customGray font-light">{componentTranslation("desc")}</p>
             <div className="py-2 flex items-center flex-wrap justify-center gap-4 lg:justify-start">
               <Button
-                className={`${CustomStyles.animations.hoverScale} text-base font-semibold text-darkSecondary`}
+                className={`${CustomStyles.animations.hoverScale} px-5 text-base font-semibold text-darkSecondary`}
                 onClick={() => router.push("https://portal.motforex.com/auth/login")}
               >
                 {componentTranslation("startTrade")}
@@ -137,7 +137,7 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
                 isOutlined
                 href="/platform?nextpage=demo-account"
                 text={componentTranslation("demoAccount")}
-                className={`${CustomStyles.animations.hoverScale} h-[42px] px-4 duration-200 text-customGray flex`}
+                className={`${CustomStyles.animations.hoverScale} hidden xs:flex h-[42px] px-4 duration-200 text-customGray`}
               />
             </div>
           </div>

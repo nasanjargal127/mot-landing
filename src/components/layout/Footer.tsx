@@ -115,7 +115,7 @@ const Footer: React.FC<FooterProps> = () => {
       className={`${CustomStyles.section} relative bg-darkSecondary`}
       aria-labelledby="footer-heading"
     >
-      <div className={`${CustomStyles.container} pb-14`}>
+      <div className={`${CustomStyles.container} py-16`}>
         <div className="flex justify-between flex-wrap sm:flex-nowrap">
           <div className=" mb-4 flex flex-col gap-4 text-sm">
             <div className="flex justify-between items-center">

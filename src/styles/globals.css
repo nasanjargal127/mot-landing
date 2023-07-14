@@ -22,27 +22,7 @@ body {
 }
 
 /* --------------------------------------------------- Default Animation -------------------------------------------------------- */
-.slide-in {
-  transform: translateX(-100%); /* Initially positioned outside the screen */
-  opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.slide-in.open {
-  transform: translateX(0%); /* Slides in from the left */
-  opacity: 1;
-}
-
-.dropdown-item {
-  max-height: 0;
-  overflow: hidden;
-  transform: translateY(-10px);
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.dropdown-item.open {
-  max-height: 200px; /* This should be large enough to contain any dropdown */
-  transform: translateY(0);
-  opacity: 1;
+.primary-glow {
+  box-shadow: 0 0 10px rgba(255, 162, 51, 0.2), 0 0 20px rgba(255, 162, 51, 0.2), 0 0 30px rgba(255, 162, 51, 0.2),
+    0 0 40px rgba(255, 162, 51, 0.2);
 }

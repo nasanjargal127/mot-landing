@@ -37,8 +37,8 @@ const StepsSection: React.FC<StepsSectionProps> = () => {
   return (
     <section className={`${CustomStyles.section} py-20 bg-gradient-to-t from-darkSecondary to-[#03273f]`}>
       <div className={`${CustomStyles.container}`}>
-        <div className="mx-auto max-w-3xl text-center mt-12">
-          <h2 className="text-[32px] font-extrabold leading-9 text-white sm:text-4xl">{translation("title")}</h2>
+        <div className="mx-auto max-w-4xl text-center my-8">
+          <h2 className={`${CustomStyles.text.title}  text-white`}>{translation("title")}</h2>
         </div>
         <ScrollAnimationWrapper className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 pt-12">
           {stepsData.map((item) => (

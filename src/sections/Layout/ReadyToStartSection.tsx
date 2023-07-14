@@ -27,7 +27,7 @@ const ReadyToStartSection: React.FC<ReadyToStartSectionProps> = () => {
         <div className="flex items-center justify-center gap-4">
           <Button
             onClick={() => router.push("https://portal.motforex.com/auth/register")}
-            className={`${CustomStyles.animations.hoverScale} text-base font-semibold text-darkSecondary`}
+            className={`${CustomStyles.animations.hoverScale} px-8 text-base font-semibold text-darkSecondary`}
           >
             {t("btnText")}
           </Button>

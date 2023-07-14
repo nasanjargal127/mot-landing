@@ -21,10 +21,10 @@ const PlatformSection: React.FC<PlatformSectionProps> = () => {
   const translation = useTranslations("platformSection");
 
   return (
-    <SectionContainer sectionClassName=" bg-gradient-to-b from-[#092235] to-[#02090D] py-32 overflow-hidden">
-      <ScrollAnimationWrapper className="grid grid-cols-1 gap-x-8 lg:max-w-none md:grid-cols-2 md:place-items-center ">
-        <motion.div variants={scrollAnimation} className="flex flex-col justify-start items-start mb-12">
-          <div className={`${CustomStyles.text.title} flex`}>
+    <SectionContainer sectionClassName={CustomStyles.backgrounds.darkSection}>
+      <ScrollAnimationWrapper className="grid grid-cols-1 gap-x-8 lg:gap-x-24  lg:max-w-none md:grid-cols-2 md:place-items-center ">
+        <motion.div variants={scrollAnimation} className="flex flex-col justify-start items-start my-12">
+          <div className={`${CustomStyles.text.title} flex flex-wrap`}>
             <h2>{translation("firstTitle")}</h2>
             <h2 className={`${CustomStyles.text.gradient} pl-1.5`}>{translation("secondTitle")}</h2>
           </div>
@@ -99,7 +99,7 @@ function PlatformButton({ onMouseEnter, onClick, text, image }: PlatformButtonPr
       className="flex w-full items-center justify-between ring-1 rounded-[18px] p-3 flex-1 xs:flex-grow-0 ring-customGray hover:bg-customGray cursor-pointer group"
     >
       <div className="flex">
-        <Image src={image} width={28} height={28} alt="PlatformIcon" className=" lg:inline" />
+        <Image src={image} width={28} height={28} alt="PlatformIcon" className="lg:inline" />
         <p className="text-lg font-semibold leading-8 md:text-sm lg:text-lg lg:inline text-white ml-4">{text}</p>
       </div>
       <SlArrowRight className="h-6 w-6 ml-2 text-mainColor rounded-full p-1 group-hover:translate-x-1 duration-300" />

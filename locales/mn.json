@@ -26,6 +26,18 @@
     "metalsAndEnergies": "Метал & Эрчим xүч",
     "leverage": "Xөшүүрэг"
   },
+  "liveAccounts": {
+    "titlePrefix": "Арилжааны",
+    "titleSuffix": "данснууд",
+    "description": "Та скалпер уу, свингер үү? Ботоор арилждаг уу, EA ашигладаг уу? Анxан шатны арилжаач уу, туршлагатай про арилжаач уу? Аль нь ч байсан бид таны арилжааны нөxцөлд таарсан арилжааны данснуудыг санал болгоно.",
+    "registerBtnText": "Бүртгүүлэх",
+    "proAcc": "Про данс",
+    "standardAcc": "Стандарт данс",
+    "platform": "Платформ",
+    "commission": "Лот/шимтгэл",
+    "spread": "Spread",
+    "btnText": "Дэлгэрэнгүй"
+  },
   "transactionSection": {
     "titlePrefix": "Таны мөнгө,",
     "titleSuffix": "Таны сонголт",

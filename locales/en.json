@@ -26,6 +26,18 @@
     "metalsAndEnergies": "Metals and Energies",
     "leverage": "Leverage"
   },
+  "liveAccounts": {
+    "titlePrefix": "Live",
+    "titleSuffix": "accounts",
+    "description": "Are you a scalper or a swinger? Do you trade with bots or use EAs? Are you a beginner trader or an experienced pro trader? Either way, we offer trading accounts that suit your trading needs.",
+    "registerBtnText": "Register now",
+    "proAcc": "Pro account",
+    "standardAcc": "Standard account",
+    "platform": "Platform",
+    "commission": "Commission/per lot",
+    "spread": "Spread",
+    "btnText": "Learn more"
+  },
   "transactionSection": {
     "titlePrefix": "Your money,",
     "titleSuffix": "Your choice",
