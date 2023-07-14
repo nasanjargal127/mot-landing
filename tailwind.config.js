@@ -18,6 +18,14 @@ module.exports = {
         customGray: "#0B2B42",
         darkText: " #98B4CD",
       },
+      screens: {
+        xn: "340px",
+        xs: "476px",
+        sm: "640px",
+        md: "768px",
+        lg: "992px",
+        xl: "1280px",
+      },
       boxShadow: {
         "3xl": "0 5px 85px -15px #FFA233",
       },
