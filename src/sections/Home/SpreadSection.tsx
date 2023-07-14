@@ -67,14 +67,14 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
   const TradePairs = response ? updateTradePairs(TRADEPAIRS, response) : TRADEPAIRS;
 
   return (
-    <SectionContainer sectionClassName="bg-white" divClassname="py-12">
+    <SectionContainer sectionClassName="bg-white" divClassname="py-24">
       <ScrollAnimationWrapper>
         <motion.div
           variants={scrollAnimation}
-          className="w-full bg-gray-100 rounded-lg py-12 px-6 lg:px-12 flex flex-wrap lg:flex-nowrap items-center justify-center shadow-lg shadow-4xl"
+          className="w-full bg-gray-100 rounded-lg py-12 px-3 xn:px-6 lg:px-12 flex flex-wrap lg:flex-nowrap items-center justify-center shadow-lg shadow-4xl"
         >
-          <div className="align-middle lg:mr-16">
-            <div className="w-full flow-root overflow-x-auto rounded-md shadow-md bg-white">
+          <div className="lg:mr-8 overflow-x-auto lg:flex-1">
+            <div className="w-fit flow-root rounded-md shadow-md  bg-white">
               <div className="flex pl-4 sm:justify-start">
                 {pairTypes.map((item, idx) => (
                   <p
@@ -126,7 +126,7 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
               </table>
             </div>
           </div>
-          <div className="flex">
+          <div className="flex lg:flex-1">
             <div className=" text-center lg:text-left mt-20 lg:mt-0">
               <h2 className="text-3xl font-extrabold tracking-tight text-customGray">
                 {componentTranslation("title")}

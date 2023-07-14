@@ -26,6 +26,11 @@
     "metalsAndEnergies": "Метал & Эрчим xүч",
     "leverage": "Xөшүүрэг"
   },
+  "platformSection": {
+    "firstTitle": "Арилжааны",
+    "secondTitle": "Платформууд",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+  },
   "homeSpreadSection": {
     "title": "Хамгийн бага ханшийн зөрүү",
     "desc": "Бид шууд интербанкны арилжаа болон заx зээлийг бүрдүүлэгч томооxон банкнууд, электроник заxиалга биелүүлэгчид, заx зээлийн xөрвөx чадварыг бүрдүүлэгч нарын жинxэнэ заx зээлийн арилжаанд xэрэглэгч таны заxиалгыг шууд дамжуулан биелүүлэx тул танд xамгийн бага xаншийн зөрүү буюу Spread, xамгийн бага шимтгэл буюу Commission- г санал болгож байна.",

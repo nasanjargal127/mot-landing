@@ -26,6 +26,11 @@
     "metalsAndEnergies": "Metals and Energies",
     "leverage": "Leverage"
   },
+  "platformSection": {
+    "firstTitle": "Trading",
+    "secondTitle": "Platforms",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+  },
   "homeSpreadSection": {
     "title": "Lowest spread and commission charges.",
     "desc": "We provide customers with the lowest interest rate differential, known as the spread, and the lowest commission charges. This is made possible through direct execution of your orders in the real market, where major banks engage in interbank trading and lending, electronic order fulfillment, and credit liquidity provision.",

@@ -35,7 +35,7 @@ const StepsSection: React.FC<StepsSectionProps> = () => {
   ];
 
   return (
-    <section className={`${CustomStyles.section} pb-16 bg-gradient-to-t from-darkSecondary to-[#03273f]`}>
+    <section className={`${CustomStyles.section} py-20 bg-gradient-to-t from-darkSecondary to-[#03273f]`}>
       <div className={`${CustomStyles.container}`}>
         <div className="mx-auto max-w-3xl text-center mt-12">
           <h2 className="text-[32px] font-extrabold leading-9 text-white sm:text-4xl">{translation("title")}</h2>

@@ -1,5 +1,5 @@
 export const CustomStyles = {
-  section: "w-full z-10 py-6 px-4",
+  section: "w-full z-10 px-4",
   container: "max-w-screen-xl mx-auto px-1 md:px-4",
   button: {
     linkButton: "py-1.5 px-4",
@@ -9,5 +9,9 @@ export const CustomStyles = {
   },
   animations: {
     hoverScale: "hover:scale-105 duration-200",
+  },
+  text: {
+    title: "text-3xl  sm:text-[36px] font-extrabold leading-9 ",
+    gradient: " bg-gradient-to-r from-[#FFA233] to-[#FFC81A] text-transparent bg-clip-text ",
   },
 };

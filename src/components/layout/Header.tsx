@@ -227,7 +227,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navbarRoutes, login
     <AnimatePresence>
       {isMobileMenuOpen && (
         <Dialog as="div" className={`md:hidden`} open={isMobileMenuOpen} onClose={setIsMobileMenuOpen}>
-          <div className="fixed inset-0 z-10" />
+          <div className="fixed bg-black opacity-80 inset-0 z-10" />
           <motion.div
             className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
             initial="hidden"
