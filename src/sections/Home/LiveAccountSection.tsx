@@ -27,7 +27,7 @@ const LiveAccountSection: React.FC<LiveAccountSectionProps> = () => {
             <Button>{translation("registerBtnText")}</Button>
           </div>
         </motion.div>
-        <div className="flex justify-center lg:pt-2 gap-8 w-full lg:flex-1 items-center ">
+        <div className="flex flex-col sm:flex-row justify-center lg:pt-2 gap-8 w-full lg:flex-1 items-center ">
           <AccountCard
             idx={1}
             img="/images/pic/pro.jpg"
