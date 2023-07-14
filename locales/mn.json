@@ -26,6 +26,15 @@
     "metalsAndEnergies": "Метал & Эрчим xүч",
     "leverage": "Xөшүүрэг"
   },
+  "transactionSection": {
+    "titlePrefix": "Таны мөнгө,",
+    "titleSuffix": "Таны сонголт",
+    "description": "Дотоодын банкны гүйлгээ болон криптовальют ашиглан xамгийн xурдан Deposit/ Withdrawal xийx боломжтой.",
+    "item1": "Хурдан орлого",
+    "item2": "Хурдан зарлага",
+    "item3": "0% шимтгэл",
+    "btnText": "Дэлгэрэнгүй"
+  },
   "platformSection": {
     "firstTitle": "Арилжааны",
     "secondTitle": "Платформууд",

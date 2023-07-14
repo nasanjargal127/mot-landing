@@ -1,6 +1,6 @@
 "use client";
 
-import { SectionContainer } from "@/src/components/layout";
+import { GrayContainer, SectionContainer } from "@/src/components/layout";
 import { ScrollAnimationWrapper } from "@/src/components/utils";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
@@ -67,89 +67,82 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
   const TradePairs = response ? updateTradePairs(TRADEPAIRS, response) : TRADEPAIRS;
 
   return (
-    <SectionContainer sectionClassName="bg-white" divClassname="py-24">
-      <ScrollAnimationWrapper>
-        <motion.div
-          variants={scrollAnimation}
-          className="w-full bg-gray-100 rounded-lg py-12 px-3 xn:px-6 lg:px-12 flex flex-wrap lg:flex-nowrap items-center justify-center shadow-lg shadow-4xl"
-        >
-          <div className="lg:mr-8 overflow-x-auto lg:flex-1">
-            <div className="w-fit flow-root rounded-md shadow-md  bg-white">
-              <div className="flex pl-4 sm:justify-start">
-                {pairTypes.map((item, idx) => (
-                  <p
-                    className={` z-2 py-5 px-3 text-sm text-center font-medium ${
-                      idx === selectedTab ? "text-primary" : "text-gray-400"
-                    } bg-white cursor-pointer`}
-                    key={idx}
-                    onClick={() => setSelectedTab(idx)}
-                  >
-                    {item}
-                  </p>
-                ))}
-              </div>
-              <table>
-                <thead>
-                  <tr className="pl-8">
-                    {tableHeaders.map((item, idx) => (
-                      <th
-                        key={idx}
-                        scope="col"
-                        className="sticky top-0 z-2 py-4 px-7 text-center text-sm font-semibold text-customGray bg-gray-200 -mx-1  pl-9 w-200"
-                      >
-                        {item}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="divide-y">
-                  {TradePairs.filter((opt) => opt.id === selectedTab).map((items) =>
-                    items.data.map((item, idx) => (
-                      <tr key={idx} className="text-center">
-                        <td className="whitespace-nowrap py-4 text-sm font-bold text-gray-800 w-250">{item.name}</td>
-                        <td className="whitespace-nowrap py-4 text-base text-gray-400 w-200">{item.spread}</td>
-                        <td className="whitespace-nowrap py-4 text-base text-gray-400 sm:pr-0 w-200">{item.bid}</td>
-                        <td className="whitespace-nowrap py-4 text-base text-gray-400 sm:pr-0 w-200">{item.ask}</td>
-                        <td className="whitespace-nowrap py-4 pl-4 text-base text-gray-400 sm:pr-8 w-200">
-                          <button
-                            type="submit"
-                            onClick={() => router.push("https://portal.motforex.com/auth/login")}
-                            className="flex-none rounded-full bg-gradient-to-r from-[#FFA233] to-[#FFC81A] px-3 py-2 text-sm font-semibold text-white hover:text-gray-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
-                          >
-                            {componentTranslation("trade")}
-                          </button>
-                        </td>
-                      </tr>
-                    )),
-                  )}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div className="flex lg:flex-1">
-            <div className=" text-center lg:text-left mt-20 lg:mt-0">
-              <h2 className="text-3xl font-extrabold tracking-tight text-customGray">
-                {componentTranslation("title")}
-              </h2>
-              <p className="my-8 text-lg text-customGray font-light">{componentTranslation("desc")}</p>
-              <div className="py-2 flex items-center flex-wrap justify-center gap-4 lg:justify-start">
-                <Button
-                  className={`${CustomStyles.animations.hoverScale} text-base font-semibold text-darkSecondary`}
-                  onClick={() => router.push("https://portal.motforex.com/auth/login")}
+    <SectionContainer sectionClassName="bg-white" divClassname="py-32">
+      <GrayContainer className="py-12 px-3 xn:px-6 lg:px-12 ">
+        <div className="lg:mr-8 overflow-x-auto lg:flex-1">
+          <div className="w-fit flow-root rounded-md shadow-md  bg-white">
+            <div className="flex pl-4 sm:justify-start">
+              {pairTypes.map((item, idx) => (
+                <p
+                  className={` z-2 py-5 px-3 text-sm text-center font-medium ${
+                    idx === selectedTab ? "text-primary" : "text-gray-400"
+                  } bg-white cursor-pointer`}
+                  key={idx}
+                  onClick={() => setSelectedTab(idx)}
                 >
-                  {componentTranslation("startTrade")}
-                </Button>
-                <LinkButton
-                  isOutlined
-                  href="/platform?nextpage=demo-account"
-                  text={componentTranslation("demoAccount")}
-                  className={`${CustomStyles.animations.hoverScale} h-[42px] px-4 duration-200 text-customGray flex`}
-                />
-              </div>
+                  {item}
+                </p>
+              ))}
+            </div>
+            <table>
+              <thead>
+                <tr className="pl-8">
+                  {tableHeaders.map((item, idx) => (
+                    <th
+                      key={idx}
+                      scope="col"
+                      className="sticky top-0 z-2 py-4 px-7 text-center text-sm font-semibold text-customGray bg-gray-200 -mx-1  pl-9 w-200"
+                    >
+                      {item}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {TradePairs.filter((opt) => opt.id === selectedTab).map((items) =>
+                  items.data.map((item, idx) => (
+                    <tr key={idx} className="text-center">
+                      <td className="whitespace-nowrap py-4 text-sm font-bold text-gray-800 w-250">{item.name}</td>
+                      <td className="whitespace-nowrap py-4 text-base text-gray-500 w-200">{item.spread}</td>
+                      <td className="whitespace-nowrap py-4 text-base text-gray-500 sm:pr-0 w-200">{item.bid}</td>
+                      <td className="whitespace-nowrap py-4 text-base text-gray-500 sm:pr-0 w-200">{item.ask}</td>
+                      <td className="whitespace-nowrap py-4 pl-4 text-base text-gray-500 sm:pr-8 w-200">
+                        <button
+                          type="submit"
+                          onClick={() => router.push("https://portal.motforex.com/auth/login")}
+                          className="flex-none rounded-full bg-gradient-to-r from-[#FFA233] to-[#FFC81A] px-3 py-2 text-sm font-semibold text-white hover:text-gray-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                        >
+                          {componentTranslation("trade")}
+                        </button>
+                      </td>
+                    </tr>
+                  )),
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="flex lg:flex-1">
+          <div className=" text-center lg:text-left mt-20 lg:mt-0">
+            <h2 className="text-3xl font-extrabold tracking-tight text-customGray">{componentTranslation("title")}</h2>
+            <p className="my-8 text-lg text-customGray font-light">{componentTranslation("desc")}</p>
+            <div className="py-2 flex items-center flex-wrap justify-center gap-4 lg:justify-start">
+              <Button
+                className={`${CustomStyles.animations.hoverScale} text-base font-semibold text-darkSecondary`}
+                onClick={() => router.push("https://portal.motforex.com/auth/login")}
+              >
+                {componentTranslation("startTrade")}
+              </Button>
+              <LinkButton
+                isOutlined
+                href="/platform?nextpage=demo-account"
+                text={componentTranslation("demoAccount")}
+                className={`${CustomStyles.animations.hoverScale} h-[42px] px-4 duration-200 text-customGray flex`}
+              />
             </div>
           </div>
-        </motion.div>
-      </ScrollAnimationWrapper>
+        </div>
+      </GrayContainer>
     </SectionContainer>
   );
 };

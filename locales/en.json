@@ -26,6 +26,15 @@
     "metalsAndEnergies": "Metals and Energies",
     "leverage": "Leverage"
   },
+  "transactionSection": {
+    "titlePrefix": "Your money,",
+    "titleSuffix": "Your choice",
+    "description": "Fastest Deposit/Withdrawal possible using local bank and cryptocurrency.",
+    "item1": "Instant Deposit",
+    "item2": "Fast withdrawal",
+    "item3": "0% Commission",
+    "btnText": "Learn more"
+  },
   "platformSection": {
     "firstTitle": "Trading",
     "secondTitle": "Platforms",

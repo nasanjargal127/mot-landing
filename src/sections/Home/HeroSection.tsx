@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "../../styles/swiperStyles.css";
 import { CustomStyles } from "@/src/styles/styles";
 import Image from "next/image";
+import { cardVariants } from "@/src/constants/motion.variant";
 
 type HeroSectionProps = {};
 
@@ -140,19 +141,3 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
   );
 };
 export default HeroSection;
-
-export const cardVariants: Variants = {
-  offscreen: {
-    y: 300,
-    opacity: 0,
-  },
-  onscreen: (custom) => ({
-    y: 0,
-    opacity: 1,
-    transition: {
-      bounce: 0.1,
-      ease: "easeIn",
-      delay: custom * 0.1,
-    },
-  }),
-};

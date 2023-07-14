@@ -9,7 +9,7 @@ import { ScrollAnimationWrapper, useLocalizeHref } from "@/src/components/utils"
 import { scrollAnimation } from "@/src/constants/motion.variant";
 import { SlArrowRight } from "react-icons/sl";
 import Image from "next/image";
-import { IconText } from "@/src/components/ui/IconText/IconText";
+import { IconText } from "@/src/components/ui/IconText";
 import { CustomStyles } from "@/src/styles/styles";
 
 type PlatformSectionProps = {};
@@ -96,7 +96,7 @@ function PlatformButton({ onMouseEnter, onClick, text, image }: PlatformButtonPr
     <div
       onMouseEnter={onMouseEnter}
       onClick={onClick}
-      className="flex w-full items-center justify-between ring-1 rounded-[18px] p-3 flex-1 xs:flex-grow-0 ring-mainGray hover:bg-customGray cursor-pointer group"
+      className="flex w-full items-center justify-between ring-1 rounded-[18px] p-3 flex-1 xs:flex-grow-0 ring-customGray hover:bg-customGray cursor-pointer group"
     >
       <div className="flex">
         <Image src={image} width={28} height={28} alt="PlatformIcon" className=" lg:inline" />

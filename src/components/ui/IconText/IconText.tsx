@@ -1,6 +1,8 @@
+"use client";
+
 import { BsFillCheckCircleFill } from "react-icons/bs";
 
-export function IconText({ title, color = "mainGray" }: { title: string; color?: string }) {
+export default function IconText({ title, color = "customGray" }: { title: string; color?: string }) {
   return (
     <div className="flex gap-2 items-start">
       <BsFillCheckCircleFill
