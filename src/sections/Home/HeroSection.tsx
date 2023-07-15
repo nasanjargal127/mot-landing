@@ -108,7 +108,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                 </div>
               </div>
               <div className="mx-auto max-w-3xl text-center flex justify-center items-center flex-wrap">
-                <p className="mt-6 text-lg sm:text-xl font-normal leading-8 text-gray50">{item.desc}</p>
+                <p className="mt-6 text-lg sm:text-xl font-normal leading-8 text-slate-50">{item.desc}</p>
               </div>
             </div>
           </SwiperSlide>

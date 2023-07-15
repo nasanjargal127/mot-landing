@@ -83,15 +83,15 @@ function AccountCard({ idx, img, name, commision, spread, platform, link }: Acco
         <div className="my-3 border-t border-white/10  lg:flex lg:items-center lg:justify-between " />
         <InfoRows>
           <p className="font-bold text-slate-300">{translation("platform")}:</p>
-          <p>{platform}</p>
+          <p className="text-slate-100">{platform}</p>
         </InfoRows>
         <InfoRows>
           <p className="font-bold text-slate-300">{translation("commission")}:</p>
-          <p>{commision} $</p>
+          <p className="text-slate-100">{commision} $</p>
         </InfoRows>
         <InfoRows>
           <p className="font-bold text-slate-300">{translation("spread")}:</p>
-          <p>{spread}</p>
+          <p className="text-slate-100">{spread}</p>
         </InfoRows>
         <div className="my-3 border-t border-white/10  lg:flex lg:items-center lg:justify-between " />
         <Button className={`${CustomStyles.animations.hoverScale} mt-2`}>{translation("btnText")}</Button>

@@ -117,7 +117,7 @@ const Footer: React.FC<FooterProps> = () => {
     >
       <div className={`${CustomStyles.container} py-16`}>
         <div className="flex justify-between flex-wrap sm:flex-nowrap">
-          <div className=" mb-4 flex flex-col gap-4 text-sm">
+          <div className=" mb-4 flex flex-col gap-4 text-sm  text-slate-50">
             <div className="flex justify-between items-center">
               <p className="text-primary font-bold">&copy; 2023 MOTFX</p>
             </div>
@@ -131,7 +131,7 @@ const Footer: React.FC<FooterProps> = () => {
               ))}
             </div>
           </div>
-          <div className=" flex flex-col gap-4 text-sm">
+          <div className=" flex flex-col gap-4 text-sm text-slate-50">
             <div className="flex items-center">
               <MdMailOutline className="text-primary h-6 w-6" />
               <a href="mailto:info@motforex.com" className="text-gray100 ml-2 hover:text-primary">

@@ -25,7 +25,7 @@ const PlatformSection: React.FC<PlatformSectionProps> = () => {
       <ScrollAnimationWrapper className="grid grid-cols-1 gap-x-8 lg:gap-x-24  lg:max-w-none md:grid-cols-2 md:place-items-center ">
         <motion.div variants={scrollAnimation} className="flex flex-col justify-start items-start my-12">
           <div className={`${CustomStyles.text.title} flex flex-wrap`}>
-            <h2>{translation("firstTitle")}</h2>
+            <h2 className="text-white">{translation("firstTitle")}</h2>
             <h2 className={`${CustomStyles.text.gradient} pl-1.5`}>{translation("secondTitle")}</h2>
           </div>
           <div className="py-6 md:py-8 text-base text-slate-100">{translation("description")}</div>
@@ -102,7 +102,7 @@ function PlatformButton({ onMouseEnter, onClick, text, image }: PlatformButtonPr
         <Image src={image} width={28} height={28} alt="PlatformIcon" className="lg:inline" />
         <p className="text-lg font-semibold leading-8 md:text-sm lg:text-lg lg:inline text-white ml-4">{text}</p>
       </div>
-      <SlArrowRight className="h-6 w-6 ml-2 text-mainColor rounded-full p-1 group-hover:translate-x-1 duration-300" />
+      <SlArrowRight className="h-6 w-6 ml-2 text-primary rounded-full p-1 group-hover:translate-x-1 duration-300" />
     </div>
   );
 }
