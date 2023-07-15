@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Dispatch, ReactNode, SetStateAction, useState } from "react";
+import React, { Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CustomStyles } from "@/src/styles/styles";
 import { Dialog } from "@headlessui/react";
@@ -8,12 +8,11 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa";
 import { BsCaretDownFill, BsFillPersonCheckFill } from "react-icons/bs";
 import { MdLogin } from "react-icons/md";
 import { LanguageContext, useLocalizeHref } from "../../components/utils";
-
 import LinkButton from "../../components/ui/Buttons/LinkButton";
 
 type HeaderProps = {};
@@ -36,6 +35,7 @@ const BrokerAuthLinks = {
 const Header: React.FC<HeaderProps> = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [navbarVisibility, setNavbarVisibility] = useState<number>(0);
+  const router = useRouter();
 
   const { scrollY } = useScroll();
   const navbarContent = useTranslations("navbarLinks");
@@ -236,7 +236,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navbarRoutes, login
             variants={slideInAnimation}
           >
             <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5 select-none">
                 <div className="w-32 h-10"></div>
               </a>
               <button type="button" className="-m-2.5 rounded-md p-2.5 " onClick={() => setIsMobileMenuOpen(false)}>
@@ -267,6 +267,10 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navbarRoutes, login
                       {item.sublinks.map((sublink, subIdx) => (
                         <Link
                           key={subIdx}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setOpenDropdown(null);
+                          }}
                           href={localizeHref(sublink.href)}
                           className={`-ml-3 block  pl-6 font-[200] text-md leading-8 hover:text-primary text-gray-400 dropdown-item ${
                             openDropdown === idx ? "open py-2" : ""

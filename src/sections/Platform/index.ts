@@ -1,4 +1,3 @@
-export { default as AccountTable } from "./AcoountTable";
 export { default as CTrader } from "./CTrader";
 export { default as DemoAccounts } from "./DemoAccount";
 export { default as MetaTrader5 } from "./MetaTrader5";

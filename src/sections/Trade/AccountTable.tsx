@@ -6,9 +6,9 @@ import { SectionContainer } from "@/src/components/layout";
 import { ScrollAnimationWrapper } from "@/src/components/utils";
 import { scrollAnimation } from "@/src/constants/motion.variant";
 
-type ContactUsProps = {};
+type AccountTableProps = {};
 
-const ContactUs: React.FC<ContactUsProps> = () => {
+const AccountTable: React.FC<AccountTableProps> = () => {
   return (
     <SectionContainer>
       <ScrollAnimationWrapper className="">
@@ -18,4 +18,4 @@ const ContactUs: React.FC<ContactUsProps> = () => {
     </SectionContainer>
   );
 };
-export default ContactUs;
+export default AccountTable;
