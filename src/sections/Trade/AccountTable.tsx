@@ -122,7 +122,7 @@ const AccountTable: React.FC<AccountTableProps> = () => {
   return (
     <SectionContainer
       id="account-table"
-      sectionClassName=" py-20 relative isolate overflow-hidden bg-gradient-to-t from-[#03273f] to-darkSecondary "
+      sectionClassName=" py-32 relative isolate overflow-hidden bg-gradient-to-t from-[#03273f] to-darkSecondary "
     >
       <ScrollAnimationWrapper className="">
         <motion.div variants={scrollAnimation} className="mx-auto max-w-5xl md:text-center">
@@ -133,7 +133,7 @@ const AccountTable: React.FC<AccountTableProps> = () => {
           <p className="text-slate-100 text-lg my-6">{translation("desc")}</p>
         </motion.div>
 
-        <motion.div variants={scrollAnimation} custom={{ duration: 3 }} className="py-16 relative w-full">
+        <motion.div variants={scrollAnimation} custom={{ duration: 3 }} className="mt-8 relative w-full">
           <div className="px-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 mt-8">
             <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
               <table className="table-fixed overflow-hidden px-2 min-w-full divide-y ring-1 ring-[#536673] rounded-lg divide-[#536673]">
@@ -154,8 +154,7 @@ const AccountTable: React.FC<AccountTableProps> = () => {
                 <tbody className="divide-y divide-[#536673]">
                   {accountTableData.map((item, idx) => {
                     const isHighlightedRow = idx % 2 === 0;
-                    const isLargeHeight = idx === 14;
-                    const rowClasses = `divide-x divide-[#536673] ${isLargeHeight ? "h-[80px]" : `h-[60px] `} ${
+                    const rowClasses = `divide-x divide-[#536673] h-[60px] ${
                       isHighlightedRow ? "bg-gradient-to-r from-[#36424a]" : ""
                     }`;
 
