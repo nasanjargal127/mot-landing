@@ -127,8 +127,8 @@ const AccountTable: React.FC<AccountTableProps> = () => {
       <ScrollAnimationWrapper className="">
         <motion.div variants={scrollAnimation} className="mx-auto max-w-5xl md:text-center">
           <TitleContainter className="md:justify-center">
-            <h3 className="text-slate-50">{translation("titlePrefix")}</h3>
-            <h3 className={`${CustomStyles.text.gradient} xn:pl-1.5`}>{translation("titleSuffix")}</h3>
+            <h3 className="xl:text-5xl text-slate-50">{translation("titlePrefix")}</h3>
+            <h3 className={`${CustomStyles.text.gradient} xl:text-5xl xn:pl-1.5`}>{translation("titleSuffix")}</h3>
           </TitleContainter>
           <p className="text-slate-100 text-lg my-6">{translation("desc")}</p>
         </motion.div>

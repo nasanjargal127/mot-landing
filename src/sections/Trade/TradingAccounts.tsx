@@ -45,8 +45,8 @@ const TradingAccounts: React.FC<TradingAccountsProps> = () => {
       <ScrollAnimationWrapper className="">
         <motion.div variants={scrollAnimation} className="mx-auto max-w-5xl md:text-center">
           <TitleContainer className="md:justify-center">
-            <h3>{translation("titlePrefix")}</h3>
-            <h3 className={`${CustomStyles.text.gradient} xn:pl-1.5`}>{translation("titleSuffix")}</h3>
+            <h3 className="xl:text-5xl">{translation("titlePrefix")}</h3>
+            <h3 className={`${CustomStyles.text.gradient} xl:text-5xl xn:pl-1.5`}>{translation("titleSuffix")}</h3>
           </TitleContainer>
           <p className="text-customGray my-6">{translation("titleDesc")}</p>
         </motion.div>
@@ -72,9 +72,8 @@ function TradingAccountCard({ item, idx, btnText }: { item: TradingAccountCardPr
         scale: 1.05,
         transition: { duration: 0.35 },
       }}
-      className="relative rounded-2xl shadow-md bg-silver py-10 px-6 sm:p-10 text-sm leading-6 flex flex-col justify-between items-start"
+      className={CustomStyles.card.roundedSilver}
     >
-      <img src={item.img} alt="item" className="w-20 h-20" />
       <div className="text-3xl font-extrabold text-customGray my-6">{item.title}</div>
       <blockquote className="text-customGray text-lg sm:text-base xl:text-lg font-light mt-3 h-28 ">
         <p>{item.desc}</p>

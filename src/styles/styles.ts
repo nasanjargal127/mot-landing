@@ -15,4 +15,8 @@ export const CustomStyles = {
     title: "text-3xl sm:text-4xl font-extrabold leading-9 ",
     gradient: " bg-gradient-to-r from-[#FFA233] to-[#FFC81A] text-transparent bg-clip-text ",
   },
+  card: {
+    roundedSilver:
+      "relative rounded-xl shadow-md bg-silver py-10 px-6 sm:p-10 text-sm leading-6 flex flex-col justify-between items-start",
+  },
 };
