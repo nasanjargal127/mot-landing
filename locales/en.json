@@ -200,7 +200,7 @@
   },
   "spreadSection": {
     "bigTitlePrefix": "Live",
-    "bigTitleSuffix": "Spreads",
+    "bigTitleSuffix": "Price",
     "desc": "Lorem epsum",
     "smallTitlePrefix": "Spreads",
     "fxPairs": "FX Pairs",
