@@ -11,23 +11,23 @@ type SectionHeaderProps = {
   title: string;
   desc: string;
   btnText?: string;
-  link?: string;
+  btnLink?: string;
 };
 
-const SectionHeader: React.FC<SectionHeaderProps> = ({ img, title, desc, btnText, link }: SectionHeaderProps) => {
+const SectionHeader: React.FC<SectionHeaderProps> = ({ img, title, desc, btnText, btnLink }: SectionHeaderProps) => {
   const searchParams = useSearchParams();
   const tab = searchParams.get("nextpage");
   const router = useRouter();
 
   return (
     <SectionContainer
-      sectionClassName="relative bg-mainGray h-[600px]"
+      sectionClassName="relative bg-mainGray h-[512px]"
       divClassname="isolate flex items-center justify-center h-full pt-8"
     >
       <motion.img
-        src="/images/banner-web/tradingAccounts.jpg"
+        src={img}
         alt=""
-        className={`absolute inset-0 -z-10 w-full h-full object-cover object-center brightness-75 `}
+        className={`absolute inset-0 -z-10 w-full h-full object-cover object-center brightness-50`}
       />
       <AnimatedDiv key={tab}>
         <div>
@@ -36,7 +36,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ img, title, desc, btnText
         </div>
         {btnText ? (
           <div className="flex items-center justify-center mt-3 sm:mt-6">
-            <Button onClick={() => router.push(link!)}>{btnText}</Button>
+            <Button onClick={() => router.push(btnLink ? btnLink : "/")}>{btnText}</Button>
           </div>
         ) : null}
       </AnimatedDiv>

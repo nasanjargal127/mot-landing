@@ -88,6 +88,24 @@
     "btnTrade": "Trade",
     "btnAccount": "Open Account"
   },
+  "platformPage": {
+    "mt5": "MetaTrader 5",
+    "mt5Desc": "MetaTrader 5 is the world's most popular and easy-to-use trading platform for traders, allowing you to trade all types of financial instruments including forex, stocks, indices, bonds, and cryptocurrencies from a single account.",
+    "cTrader": "cTrader",
+    "cTraderDesc": "cTrader is an innovative, easy to use interface and powerful platform designed for traders who want the fastest trade order execution, complete analysis of their trades.",
+    "tradingHour": "Trading Hour",
+    "tradingHourDesc": "Forex, stock, and crypto markets are continuously traded 24/7, and all around the world, so you can trade anywhere and anytime.",
+    "demoAccount": "Demo Account",
+    "demoAccountDesc": "You can open a free DEMO account to test and practice our broker system and choose from all trading account types and platforms.",
+    "btnAccount": "Open Account"
+  },
+  "supportPage": {
+    "contactUs": "Contact Us",
+    "contactUsDesc": "We are always ready to help you. Let us know if you have any problems or questions or need to contact us. We will respond to you within 24 hours at the latest.",
+    "partnerWithUs": "Partner With Us",
+    "partnerWithUsDesc": "We are ready to cooperate with you if you can reach the public, have your audience, and can promote our broker's services and products to others. We will rate each customer you invite and share in the profits of the activity.",
+    "btnAccount": "Open Account"
+  },
   "stepsSection": {
     "title": "Follow the 4 steps below and start trading within 24 hours.",
     "register": "Register",

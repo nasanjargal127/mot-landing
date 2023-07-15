@@ -10,6 +10,9 @@ const manrope = Manrope({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "MOTFX - Money never sleeps",
   description: "Landing page of Motforex broker",
+  icons: {
+    icon: "/icon.ico",
+  },
 };
 
 async function RootLayout({ children, params }: { children: React.ReactNode; params: { locale: string } }) {
@@ -36,21 +39,16 @@ async function RootLayout({ children, params }: { children: React.ReactNode; par
       <head>
         <title>{`${metadata.title}`}</title>
         <meta content={`${metadata.description}`} name="description" />
-        {/* Open Graph
         <meta property="og:type" content={externalMetadata.type} />
         <meta property="og:site_name" content={externalMetadata.siteName} />
         <meta property="og:description" content={`${metadata.description}`} />
         <meta property="og:title" content={`${metadata.title}`} />
         <meta property="og:image" content={externalMetadata.image} />
-
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@F2aldi" />
         <meta name="twitter:title" content={`${metadata.title}`} />
         <meta name="twitter:description" content={`${metadata.description}`} />
         <meta name="twitter:image" content={externalMetadata.image} />
-        <meta name="msapplication-TileImage" content="/public/favicon.ico" />
-        <link rel="shortcut icon" href="/public/favicon.ico" />
       </head>
       <body className={manrope.className}>
         <NextIntlClientProvider locale={params.locale} messages={messages}>

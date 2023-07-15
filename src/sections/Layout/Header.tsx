@@ -48,55 +48,55 @@ const Header: React.FC<HeaderProps> = () => {
   const navbarRoutes: NavbarRoutesProps[] = [
     {
       name: navbarContent("trade"),
-      href: "/trade",
+      href: "/trade?nextpage=accounts",
       sublinks: [
         {
           name: navbarContent("tradeAccount"),
-          href: "/trade",
+          href: "/trade?nextpage=accounts",
         },
         {
           name: navbarContent("market"),
-          href: "",
+          href: "/trade?nextpage=market",
         },
         {
           name: navbarContent("priceSpread"),
-          href: "",
+          href: "/trade?nextpage=spread",
         },
       ],
     },
     {
       name: navbarContent("platform"),
-      href: "/platform",
+      href: "/platform?nextpage=mt5",
       sublinks: [
         {
           name: navbarContent("mt5"),
-          href: "",
+          href: "/platform?nextpage=mt5",
         },
         {
           name: navbarContent("ctrader"),
-          href: "",
+          href: "/platform?nextpage=ctrader",
         },
         {
           name: navbarContent("tradingHour"),
-          href: "",
+          href: "/platform?nextpage=trading-hours",
         },
         {
           name: navbarContent("demoAccount"),
-          href: "",
+          href: "/platform?nextpage=demo-accounts",
         },
       ],
     },
     {
       name: navbarContent("support"),
-      href: "/support",
+      href: "/support?nextpage=contact-us",
       sublinks: [
         {
           name: navbarContent("contactUs"),
-          href: "",
+          href: "/support?nextpage=contact-us",
         },
         {
           name: navbarContent("partner"),
-          href: "",
+          href: "/support?nextpage=partner",
         },
       ],
     },
@@ -185,7 +185,7 @@ function DropMenu({ items, navbarVisibility }: { items: SublinksProps[]; navbarV
   return (
     <div
       className={
-        (navbarVisibility ? " bg-secondary " : "  ") +
+        (navbarVisibility ? " bg-secondary " : " backdrop-blur-lg  ") +
         "absolute top-full z-10 -left-5 py-3 px-6 hidden group-hover:flex flex-col rounded-b-xl duration-200"
       }
     >
