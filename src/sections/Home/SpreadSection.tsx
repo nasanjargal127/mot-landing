@@ -9,6 +9,7 @@ import { scrollAnimation } from "@/src/constants/motion.variant";
 import { useRouter } from "next/navigation";
 import { Button, LinkButton } from "@/src/components/ui/Buttons";
 import { CustomStyles } from "@/src/styles/styles";
+import { URL_BROKER_LOGIN } from "@/src/constants/path";
 
 type SpreadSectionProps = {};
 
@@ -109,7 +110,7 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
                       <td className="whitespace-nowrap py-4 pl-4 text-base text-gray-500 sm:pr-8 w-200">
                         <button
                           type="submit"
-                          onClick={() => router.push("https://portal.motforex.com/auth/login")}
+                          onClick={() => router.push(URL_BROKER_LOGIN)}
                           className="flex-none rounded-full bg-gradient-to-r from-[#FFA233] to-[#FFC81A] px-3 py-2 text-sm font-semibold text-white hover:text-gray-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
                         >
                           {componentTranslation("trade")}
@@ -129,7 +130,7 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
             <div className="py-2 flex items-center flex-wrap justify-center gap-4 lg:justify-start">
               <Button
                 className={`${CustomStyles.animations.hoverScale} px-5 text-base font-semibold text-darkSecondary`}
-                onClick={() => router.push("https://portal.motforex.com/auth/login")}
+                onClick={() => router.push(URL_BROKER_LOGIN)}
               >
                 {componentTranslation("startTrade")}
               </Button>

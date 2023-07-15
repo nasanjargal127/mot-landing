@@ -74,6 +74,7 @@ function TradingAccountCard({ item, idx, btnText }: { item: TradingAccountCardPr
       }}
       className={CustomStyles.card.roundedSilver}
     >
+      <img src={item.img} alt="item" className="w-20 h-20" />
       <div className="text-3xl font-extrabold text-customGray my-6">{item.title}</div>
       <blockquote className="text-customGray text-lg sm:text-base xl:text-lg font-light mt-3 h-28 ">
         <p>{item.desc}</p>

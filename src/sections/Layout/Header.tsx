@@ -14,6 +14,7 @@ import { BsCaretDownFill, BsFillPersonCheckFill } from "react-icons/bs";
 import { MdLogin } from "react-icons/md";
 import { LanguageContext, useLocalizeHref } from "../../components/utils";
 import LinkButton from "../../components/ui/Buttons/LinkButton";
+import { URL_BROKER_LOGIN, URL_BROKER_REGISTER } from "@/src/constants/path";
 
 type HeaderProps = {};
 
@@ -26,11 +27,6 @@ interface NavbarRoutesProps {
   href: string;
   sublinks: SublinksProps[];
 }
-
-const BrokerAuthLinks = {
-  login: "https://portal.motforex.com/auth/login",
-  register: "https://portal.motforex.com/auth/register",
-};
 
 const Header: React.FC<HeaderProps> = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -126,12 +122,12 @@ const Header: React.FC<HeaderProps> = () => {
         </ul>
 
         <div className="flex lg:flex-1 justify-end items-center gap-1 md:gap-4">
-          <Link className="font-medium hover:text-primary pr-1 hidden lg:flex" href={BrokerAuthLinks.login}>
+          <Link className="font-medium hover:text-primary pr-1 hidden lg:flex" href={URL_BROKER_LOGIN}>
             {navbarContent("login")}
           </Link>
           <LinkButton
             className={`px-4 py-2 text-sm duration-200 hover:bg-primary hover:text-black hidden md:flex`}
-            href={BrokerAuthLinks.register}
+            href={URL_BROKER_REGISTER}
             isOutlined
             text={navbarContent("openAccount")}
           />
@@ -283,13 +279,13 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navbarRoutes, login
                   ))}
                 </div>
                 <div>
-                  <Link href={BrokerAuthLinks.login} className="flex flex-row justify-between items-center group ">
+                  <Link href={URL_BROKER_LOGIN} className="flex flex-row justify-between items-center group ">
                     <div className="-ml-3 mt-4 py-3 pl-3 pr-1 font-base text-lg leading-8 group-hover:text-primary text-white">
                       {loginText}
                     </div>
                     <MdLogin size={26} className="text-white group-hover:text-primary" />
                   </Link>
-                  <Link href={BrokerAuthLinks.register} className="flex flex-row justify-between items-center group">
+                  <Link href={URL_BROKER_REGISTER} className="flex flex-row justify-between items-center group">
                     <div className="-ml-3 py-3 pl-3 pr-1 font-base text-lg leading-8 group-hover:text-primary text-white">
                       {register}
                     </div>

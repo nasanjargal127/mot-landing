@@ -24,9 +24,10 @@ export const cardVariants: Variants = {
     y: 0,
     opacity: 1,
     transition: {
-      bounce: 0.1,
-      ease: "easeIn",
+      bounce: 0.2,
+      ease: "easeInOut",
       delay: custom * 0.1,
+      duration: 1, // choose duration that suits your needs
     },
   }),
 };

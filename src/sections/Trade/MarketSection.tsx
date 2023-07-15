@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SectionContainer } from "@/src/components/layout";
 import { ScrollAnimationWrapper } from "@/src/components/utils";
-import { scrollAnimation } from "@/src/constants/motion.variant";
+import { cardVariants, scrollAnimation } from "@/src/constants/motion.variant";
 import { useTranslations } from "next-intl";
 import TitleContainer from "@/src/components/layout/TitleContainer";
 import { CustomStyles } from "@/src/styles/styles";
@@ -71,18 +71,18 @@ const MarketSection: React.FC<MarketSectionProps> = () => {
 
   return (
     <SectionContainer id="market" sectionClassName=" py-32 bg-white ">
-      <ScrollAnimationWrapper className="w-full">
+      <ScrollAnimationWrapper className="w-full" viewPortAmount={0.1}>
         <motion.div variants={scrollAnimation}>
           <TitleContainer className="md:justify-center">
             <h3 className="xl:text-5xl">{translation("titlePrefix")}</h3>
-            <h3 className={`${CustomStyles.text.gradient} xl:text-5xl xn:pl-2`}>{translation("titleSuffix")}</h3>
+            <h3 className={`${CustomStyles.text.gradient} xl:text-5xl pl-1.2 xn:pl-2`}>{translation("titleSuffix")}</h3>
           </TitleContainer>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6  mt-12">
+        <motion.div variants={cardVariants} custom={1} className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-24">
           {marketItemData.map((item, idx) => (
             <MarketInfoCard key={idx} item={item} idx={idx} />
           ))}
-        </div>
+        </motion.div>
       </ScrollAnimationWrapper>
     </SectionContainer>
   );
@@ -94,19 +94,31 @@ type MarketInfoCardProps = {
   idx: number;
 };
 
+const variants = {
+  hover: {
+    y: 10,
+    boxShadow:
+      "0 0 10px rgba(128, 128, 128, 0.1), 0 0 20px rgba(128, 128, 128, 0.1), 0 0 30px rgba(128, 128, 128, 0.1), 0 0 40px rgba(128, 128, 128, 0.1)",
+  },
+  rest: {
+    y: 0,
+    boxShadow: "0px 0px 0px rgba(128, 128, 128, 0.2)",
+  },
+};
+
 function MarketInfoCard({ item, idx }: MarketInfoCardProps) {
   return (
     <motion.div
-      variants={scrollAnimation}
+      variants={variants}
       custom={{ duration: idx * 1.5 }}
-      whileHover={{
-        scale: 1.05,
-        transition: { duration: 0.35 },
-      }}
-      className={`${CustomStyles.card.roundedSilver} h-96`}
+      whileHover="hover"
+      initial="rest"
+      animate="rest"
+      transition={{ duration: 0.35 }}
+      className={`${CustomStyles.card.roundedSilver} h-[528px] xs:h-96`}
     >
-      <div className="flex justify-center items-center bg-gray-300 rounded-xl h-24 w-24 group">
-        <img src={item.img} alt="item" className="w-14 h-16" />
+      <div className="flex justify-center items-center bg-gray-300 rounded-xl h-20 w-20 group">
+        <img src={item.img} alt="item" className="w-12 h-14" />
       </div>
       <h3 className="text-customGray group-hover:text-primary text-2xl font-black mt-8 md:mt-4">{item.title}</h3>
       <p className="text-customGray font-light my-4">{item.desc}</p>

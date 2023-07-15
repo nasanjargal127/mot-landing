@@ -14,6 +14,7 @@ import Link from "next/link";
 import React from "react";
 import { MdMailOutline } from "react-icons/md";
 import { useLocalizeHref } from "../../components/utils";
+import { URL_BROKER_REGISTER } from "@/src/constants/path";
 
 type FooterProps = {};
 
@@ -59,7 +60,7 @@ const Footer: React.FC<FooterProps> = () => {
       links: [
         {
           name: footerLinkTranslation("openAccount"),
-          href: localizeHref("https://portal.motforex.com/auth/register"),
+          href: localizeHref(URL_BROKER_REGISTER),
         },
         {
           name: footerLinkTranslation("loginAccount"),

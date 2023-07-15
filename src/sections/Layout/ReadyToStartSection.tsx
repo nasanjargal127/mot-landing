@@ -5,6 +5,7 @@ import { CustomStyles } from "@/src/styles/styles";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Button, LinkButton } from "../../components/ui/Buttons";
+import { URL_BROKER_REGISTER } from "@/src/constants/path";
 
 type ReadyToStartSectionProps = {};
 
@@ -26,7 +27,7 @@ const ReadyToStartSection: React.FC<ReadyToStartSectionProps> = () => {
         <p className="text-white text-lg text-center">{t("description")}</p>
         <div className="flex items-center justify-center gap-4">
           <Button
-            onClick={() => router.push("https://portal.motforex.com/auth/register")}
+            onClick={() => router.push(URL_BROKER_REGISTER)}
             className={`${CustomStyles.animations.hoverScale} px-8 text-base font-semibold text-darkSecondary`}
           >
             {t("btnText")}

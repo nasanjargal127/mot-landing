@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 import { it } from "node:test";
 import { Button } from "@/src/components/ui/Buttons";
 import { useRouter } from "next/navigation";
+import { URL_BROKER_REGISTER } from "@/src/constants/path";
 
 type AccountTableProps = {};
 
@@ -172,26 +173,17 @@ const AccountTable: React.FC<AccountTableProps> = () => {
                   <tr className="divide-x divide-[#536673] h-[80px]">
                     <td className="px-4 text-base font-medium text-white" scope="row"></td>
                     <td className="px-2 lg:px-12 xl:px-20 text-sm font-medium text-white">
-                      <Button
-                        className="w-full"
-                        onClick={() => router.push("https://portal.motforex.com/auth/register")}
-                      >
+                      <Button className="w-full" onClick={() => router.push(URL_BROKER_REGISTER)}>
                         {translation("btnRegister")}
                       </Button>
                     </td>
                     <td className="px-2 lg:px-12 xl:px-20 text-sm font-medium text-white">
-                      <Button
-                        className="w-full"
-                        onClick={() => router.push("https://portal.motforex.com/auth/register")}
-                      >
+                      <Button className="w-full" onClick={() => router.push(URL_BROKER_REGISTER)}>
                         {translation("btnRegister")}
                       </Button>
                     </td>
                     <td className="px-2 lg:px-12 xl:px-20 text-sm font-medium text-white">
-                      <Button
-                        className="w-full"
-                        onClick={() => router.push("https://portal.motforex.com/auth/register")}
-                      >
+                      <Button className="w-full" onClick={() => router.push(URL_BROKER_REGISTER)}>
                         {translation("btnRegister")}
                       </Button>
                     </td>

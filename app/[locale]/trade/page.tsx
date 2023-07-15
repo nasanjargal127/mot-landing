@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { useMediaQuery } from "react-responsive";
 import { useLocalizeHref } from "@/src/components/utils";
 import { useSearchParams } from "next/navigation";
-import { URL_TRADE_ACCOUNTS, URL_TRADE_MARKET, URL_TRADE_SPREAD } from "@/src/constants/path";
+import { URL_BROKER_REGISTER, URL_TRADE_ACCOUNTS, URL_TRADE_MARKET, URL_TRADE_SPREAD } from "@/src/constants/path";
 import { AccountTable, MarketSection, SpreadSection, TradingAccounts } from "@/src/sections/Trade";
 import { StepsSection } from "@/src/sections/Layout";
 import AccountDetails from "@/src/sections/Trade/AccountDetails";
@@ -27,7 +27,7 @@ const Trade: React.FC<TradeProps> = () => {
       title: translation("tradeAccount"),
       link: "accounts",
       img: "/images" + (isLg ? "/banner-web" : "/banner-mobile") + "/tradingAccounts.jpg",
-      btnLinks: localizeHref("https://portal.motforex.com/auth/register"),
+      btnLinks: localizeHref(URL_BROKER_REGISTER),
       btnText: translation("btnAccount"),
       desc: translation("accountDesc"),
     },
@@ -35,7 +35,7 @@ const Trade: React.FC<TradeProps> = () => {
       title: translation("market"),
       link: "market",
       img: "/images" + (isLg ? "/banner-web" : "/banner-mobile") + "/market.jpg",
-      btnLinks: localizeHref("https://portal.motforex.com/auth/register"),
+      btnLinks: localizeHref(URL_BROKER_REGISTER),
       btnText: translation("btnAccount"),
       desc: translation("marketDesc"),
     },
