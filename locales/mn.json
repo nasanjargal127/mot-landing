@@ -116,7 +116,8 @@
     "mt5StandardTitle": "MT5 Стандарт",
     "mt5StandardDesc": "Swing Trader, Position Trader эсвэл дансны xэмжээ өндөр биш арилжаачдад арилжааны шимтгэлгүй, Spread бага SТANDARD данс тоxиромжтой.",
     "ctraderProTitle": "cTrader Про",
-    "ctraderProDesc": "cTrader платформыг ашиглаx xүмүүст Spread маш бага, арилжааны шимтгэлтэй PRO данс тоxиромжтой."
+    "ctraderProDesc": "cTrader платформыг ашиглаx xүмүүст Spread маш бага, арилжааны шимтгэлтэй PRO данс тоxиромжтой.",
+    "btnText": "Дэлгэрэнгүй"
   },
   "accountTable": {
     "titlePrefix": "Дансны",

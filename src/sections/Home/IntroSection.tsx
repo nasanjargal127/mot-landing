@@ -80,7 +80,7 @@ const IntroSection: React.FC<IntroSectionProps> = () => {
               scale: 1.05,
               transition: { duration: 0.35 },
             }}
-            className="relative rounded-2xl shadow-md bg-[#F6F6F6] py-10 px-4 sm:p-10 text-sm leading-6 flex flex-col justify-between items-center"
+            className="relative rounded-2xl shadow-md bg-silver py-10 px-4 sm:p-10 text-sm leading-6 flex flex-col justify-between items-center"
           >
             <div className="flex justify-center items-center bg-gray-300 rounded-[20px] h-24 w-24">
               <Image width={60} height={60} src={item.image} alt="item" />

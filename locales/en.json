@@ -116,7 +116,8 @@
     "mt5StandardTitle": "MT5 Standard",
     "mt5StandardDesc": "The MT5 STANDARD account is perfect for Swing Traders, Position Traders, or low-volume traders. It is a STANDARD account with no trading fees and low spreads.",
     "ctraderProTitle": "cTrader PRO",
-    "ctraderProDesc": "A PRO account with very low spreads and low trading commision is available for users of the cTrader platform"
+    "ctraderProDesc": "A PRO account with very low spreads and low trading commision is available for users of the cTrader platform",
+    "btnText": "Learn more"
   },
   "accountTable": {
     "titlePrefix": "Account",
