@@ -5,11 +5,18 @@ import { PageWithHeaderContainer } from "@/src/components/layout";
 import { PageItemProps } from "@/src/constants/type.const";
 import { useTranslations } from "next-intl";
 import { useMediaQuery } from "react-responsive";
+import { useLocalizeHref } from "@/src/components/utils";
+import { useSearchParams } from "next/navigation";
+import { URL_TRADE_ACCOUNTS, URL_TRADE_MARKET, URL_TRADE_SPREAD } from "@/src/constants/path";
+import { MarketSection, SpreadSection, TradingAccounts } from "@/src/sections/Trade";
 
 type TradeProps = {};
 
 const Trade: React.FC<TradeProps> = () => {
+  const searchParams = useSearchParams();
+  const tab = searchParams.get("nextpage");
   const translation = useTranslations("tradePage");
+  const localizeHref = useLocalizeHref();
   const isLg = useMediaQuery({ query: "(min-width: 992px)" });
 
   // Recalculate page items on each render
@@ -18,7 +25,7 @@ const Trade: React.FC<TradeProps> = () => {
       title: translation("tradeAccount"),
       link: "accounts",
       img: "/images" + (isLg ? "/banner-web" : "/banner-mobile") + "/tradingAccounts.jpg",
-      btnLinks: "",
+      btnLinks: localizeHref("https://portal.motforex.com/auth/register"),
       btnText: translation("btnAccount"),
       desc: translation("accountDesc"),
     },
@@ -26,7 +33,7 @@ const Trade: React.FC<TradeProps> = () => {
       title: translation("market"),
       link: "market",
       img: "/images" + (isLg ? "/banner-web" : "/banner-mobile") + "/market.jpg",
-      btnLinks: "",
+      btnLinks: localizeHref("https://portal.motforex.com/auth/register"),
       btnText: translation("btnAccount"),
       desc: translation("marketDesc"),
     },
@@ -34,15 +41,17 @@ const Trade: React.FC<TradeProps> = () => {
       title: translation("price"),
       link: "spread",
       img: "/images" + (isLg ? "/banner-web" : "/banner-mobile") + "/price.jpg",
-      btnLinks: "",
-      btnText: translation("btnAccount"),
+      btnLinks: localizeHref("/platform?nextpage=mt5"),
+      btnText: translation("btnTrading"),
       desc: translation("priceDesc"),
     },
   ];
 
   return (
     <PageWithHeaderContainer pageData={tradePageItems}>
-      <div>Hi</div>
+      {tab === URL_TRADE_ACCOUNTS ? <TradingAccounts /> : <></>}
+      {tab === URL_TRADE_MARKET ? <MarketSection /> : <></>}
+      {tab === URL_TRADE_SPREAD ? <SpreadSection /> : <></>}
     </PageWithHeaderContainer>
   );
 };

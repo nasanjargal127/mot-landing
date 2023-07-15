@@ -4,10 +4,16 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { useMediaQuery } from "react-responsive";
 import { PageWithHeaderContainer } from "@/src/components/layout";
+import { useSearchParams } from "next/navigation";
+import { URL_SUPPORT_CONTACT_US, URL_SUPPORT_PARTNER } from "@/src/constants/path";
+import { ContactUs } from "@/src/sections/Support";
+import PartnerWithUs from "@/src/sections/Support/PartnerWithUs";
 
 type pageProps = {};
 
 const Support: React.FC<pageProps> = () => {
+  const searchParams = useSearchParams();
+  const tab = searchParams.get("nextpage");
   const translation = useTranslations("supportPage");
   const isLg = useMediaQuery({
     query: "(min-width: 992px)",
@@ -19,7 +25,7 @@ const Support: React.FC<pageProps> = () => {
       link: "contact-us",
       img: "/images" + (isLg ? "/banner-web" : "/banner-mobile") + "/contactUs.jpg",
       btnLinks: "",
-      btnText: translation("btnAccount"),
+      btnText: "",
       desc: translation("contactUsDesc"),
     },
     {
@@ -27,14 +33,15 @@ const Support: React.FC<pageProps> = () => {
       link: "partner",
       img: "/images" + (isLg ? "/banner-web" : "/banner-mobile") + "/partner.jpg",
       btnLinks: "",
-      btnText: translation("btnAccount"),
+      btnText: "",
       desc: translation("partnerWithUsDesc"),
     },
   ];
 
   return (
     <PageWithHeaderContainer pageData={supportPageItems}>
-      <div>hi</div>
+      {tab === URL_SUPPORT_CONTACT_US ? <ContactUs /> : <></>}
+      {tab === URL_SUPPORT_PARTNER ? <PartnerWithUs /> : <></>}
     </PageWithHeaderContainer>
   );
 };

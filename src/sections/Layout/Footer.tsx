@@ -121,7 +121,7 @@ const Footer: React.FC<FooterProps> = () => {
             <div className="flex justify-between items-center">
               <p className="text-primary font-bold">&copy; 2023 MOTFX</p>
             </div>
-            <p className="text-gray100 my-3 font-medium text-sm w-4/5">{infotTranslation("info")}</p>
+            <p className="text-slate-100 my-3 font-medium text-sm w-4/5">{infotTranslation("info")}</p>
             <div className="flex space-x-4">
               {SocialLinks.map((item, idx) => (
                 <a key={idx} href={item.href} className="text-primary">
@@ -133,20 +133,20 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
           <div className=" flex flex-col gap-4 text-sm text-slate-50">
             <div className="flex items-center">
-              <MdMailOutline className="text-primary h-6 w-6" />
-              <a href="mailto:info@motforex.com" className="text-gray100 ml-2 hover:text-primary">
+              <MdMailOutline size={27} className="text-primary" />
+              <a href="mailto:info@motforex.com" className="text-slate-100 ml-3 hover:text-primary">
                 info@motforex.com
               </a>
             </div>
             <div className="flex items-center">
-              <RiPhoneLine className="text-primary h-6 w-6" />
-              <a href="tel:97672222200" className="text-gray100 ml-2 hover:text-primary">
+              <RiPhoneLine size={28} className="text-primary" />
+              <a href="tel:97672222200" className="text-slate-100 ml-3 hover:text-primary">
                 +976-7222 2200
               </a>
             </div>
             <div className="flex items-start">
               <RiMapPin2Line className="text-primary h-12 w-12" />
-              <p className="text-gray100 ml-2 mt-2">{infotTranslation("address")}</p>
+              <p className="text-slate-100 ml-2 mt-2">{infotTranslation("address")}</p>
             </div>
           </div>
         </div>

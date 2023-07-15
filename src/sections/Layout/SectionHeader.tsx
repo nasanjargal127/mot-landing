@@ -21,8 +21,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ img, title, desc, btnText
 
   return (
     <SectionContainer
-      sectionClassName="relative bg-mainGray h-[512px]"
-      divClassname="isolate flex items-center justify-center h-full pt-8"
+      sectionClassName="relative bg-mainGray h-[578px]"
+      divClassname="isolate flex items-center justify-center h-full pt-12"
     >
       <motion.img
         src={img}
@@ -31,8 +31,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ img, title, desc, btnText
       />
       <AnimatedDiv key={tab}>
         <div>
-          <h1 className="text-3xl mt-5 sm:mt-0 font-bold tracking-tight text-white sm:text-5xl text-center">{title}</h1>
-          <p className="mt-6 text-xs sm:text-lg leading-5 sm:leading-6 text-gray50 text-center">{desc}</p>
+          <h1 className="text-3xl sm:text-6xl mt-5 sm:mt-0 font-bold tracking-tight text-white text-center">{title}</h1>
+          <p className="mt-6 text-xs sm:text-lg leading-5 font-light sm:leading-6 text-gray50 text-center">{desc}</p>
         </div>
         {btnText ? (
           <div className="flex items-center justify-center mt-3 sm:mt-6">

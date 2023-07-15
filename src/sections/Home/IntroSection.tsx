@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ScrollAnimationWrapper, useLocalizeHref } from "@/src/components/utils";
+import Image from "next/image";
 
 type IntroSectionProps = {};
 
@@ -81,8 +82,8 @@ const IntroSection: React.FC<IntroSectionProps> = () => {
             }}
             className="relative rounded-2xl shadow-md bg-[#F6F6F6] py-10 px-4 sm:p-10 text-sm leading-6 flex flex-col justify-between items-center"
           >
-            <div className="flex justify-center items-center bg-gray-300 rounded-[20px] p-3">
-              <img className="w-[60px] text-mainColor" src={item.image} alt="item" />
+            <div className="flex justify-center items-center bg-gray-300 rounded-[20px] h-24 w-24">
+              <Image width={60} height={60} src={item.image} alt="item" />
             </div>
             <h6 className="text-2xl text-customGray text-center font-extrabold my-3">{item.title}</h6>
             <blockquote className="text-customGray text-center text-base sm:text-lg font-light">
@@ -94,7 +95,7 @@ const IntroSection: React.FC<IntroSectionProps> = () => {
                 router.push(item.link);
               }}
               isOutlined
-              className={`${CustomStyles.animations.hoverScale} text-customGray text-lg px-4 ring-primary mt-6`}
+              className={`${CustomStyles.animations.hoverScale} text-customGray text-base px-4 ring-primary mt-6`}
               // rightIcon={}
             >
               {translation("btnText")}

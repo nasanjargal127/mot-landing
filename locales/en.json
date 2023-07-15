@@ -85,7 +85,7 @@
     "marketDesc": "We offer 2000+ FX Pairs, CFDs, Stocks, Stocks, Metals, Oil, Indices, Cryptocurrencies, etc. All trading options are available.",
     "price": "Price",
     "priceDesc": "MOTFX broker executes orders in 15 milliseconds through electronic order fulfillment agents connected to the interbank system, where major banks, funds, and traders of the world trade with each other, so it delivers the lowest possible interest rate difference and fees to its customers.",
-    "btnTrade": "Trade",
+    "btnTrading": "Start Trading",
     "btnAccount": "Open Account"
   },
   "platformPage": {
@@ -97,7 +97,8 @@
     "tradingHourDesc": "Forex, stock, and crypto markets are continuously traded 24/7, and all around the world, so you can trade anywhere and anytime.",
     "demoAccount": "Demo Account",
     "demoAccountDesc": "You can open a free DEMO account to test and practice our broker system and choose from all trading account types and platforms.",
-    "btnAccount": "Open Account"
+    "btnMt5": "Download MetaTrader5",
+    "btnCtrader": "Download cTrader"
   },
   "supportPage": {
     "contactUs": "Contact Us",

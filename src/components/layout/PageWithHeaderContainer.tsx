@@ -26,12 +26,18 @@ const PageWithHeaderContainer: React.FC<PageWithHeaderContainerProps> = ({ child
     if (!item) {
       router.push("/404");
     }
-  }, [tab]);
+  }, [tab, pageData, router]);
 
   return (
     <main id="trade" className="w-full bg-customGray">
       {pageItem && (
-        <SectionHeader img={pageItem.img} title={pageItem.title} desc={pageItem.desc} btnText={pageItem.btnText} />
+        <SectionHeader
+          img={pageItem.img}
+          title={pageItem.title}
+          desc={pageItem.desc}
+          btnText={pageItem.btnText}
+          btnLink={pageItem.btnLinks}
+        />
       )}
       {children}
     </main>

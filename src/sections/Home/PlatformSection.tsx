@@ -119,7 +119,7 @@ function PlatformImage({ laptopImg, phoneImg }: { laptopImg: string; phoneImg: s
         }}
         className="absolute rounded-md w-4/5 sm:w-full h-full top-0 ml-16 xs:ml-24 md:ml-8 lg:ml-12 xl:ml-20 pt-20 sm:pt-20 md:pt-12 lg:pt-16 pb-4"
       >
-        <img className="w-full " src={laptopImg} alt="App screenshot" />
+        <img className="w-full" src={laptopImg} alt="App screenshot" />
       </motion.div>
       <motion.div
         initial={{ y: 200, opacity: 0 }}
