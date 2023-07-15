@@ -8,7 +8,8 @@ import { useMediaQuery } from "react-responsive";
 import { useLocalizeHref } from "@/src/components/utils";
 import { useSearchParams } from "next/navigation";
 import { URL_TRADE_ACCOUNTS, URL_TRADE_MARKET, URL_TRADE_SPREAD } from "@/src/constants/path";
-import { MarketSection, SpreadSection, TradingAccounts } from "@/src/sections/Trade";
+import { AccountTable, MarketSection, SpreadSection, TradingAccounts } from "@/src/sections/Trade";
+import { StepsSection } from "@/src/sections/Layout";
 
 type TradeProps = {};
 
@@ -49,7 +50,15 @@ const Trade: React.FC<TradeProps> = () => {
 
   return (
     <PageWithHeaderContainer pageData={tradePageItems}>
-      {tab === URL_TRADE_ACCOUNTS ? <TradingAccounts /> : <></>}
+      {tab === URL_TRADE_ACCOUNTS ? (
+        <>
+          <TradingAccounts />
+          <AccountTable />
+          <StepsSection />
+        </>
+      ) : (
+        <></>
+      )}
       {tab === URL_TRADE_MARKET ? <MarketSection /> : <></>}
       {tab === URL_TRADE_SPREAD ? <SpreadSection /> : <></>}
     </PageWithHeaderContainer>

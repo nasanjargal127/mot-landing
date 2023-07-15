@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import { CustomStyles } from "@/src/styles/styles";
 import { Button } from "@/src/components/ui/Buttons";
 import { useRouter } from "next/navigation";
+import TitleContainer from "@/src/components/layout/TitleContainer";
 
 type TradingAccountsProps = {};
 
@@ -43,12 +44,10 @@ const TradingAccounts: React.FC<TradingAccountsProps> = () => {
     <SectionContainer id="trading-accounts" sectionClassName="bg-white py-32">
       <ScrollAnimationWrapper className="">
         <motion.div variants={scrollAnimation} className="mx-auto max-w-5xl md:text-center">
-          <div className="flex flex-wrap md:justify-center text-customGray">
-            <h3 className={`${CustomStyles.text.title}`}>{translation("titlePrefix")}</h3>
-            <h3 className={`${CustomStyles.text.title} ${CustomStyles.text.gradient} xn:pl-1.5`}>
-              {translation("titleSuffix")}
-            </h3>
-          </div>
+          <TitleContainer className="md:justify-center">
+            <h3>{translation("titlePrefix")}</h3>
+            <h3 className={`${CustomStyles.text.gradient} xn:pl-1.5`}>{translation("titleSuffix")}</h3>
+          </TitleContainer>
           <p className="text-customGray my-6">{translation("titleDesc")}</p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
