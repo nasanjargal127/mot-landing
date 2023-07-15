@@ -1,10 +1,9 @@
-import { Footer, Header } from "@/src/components/layout";
 import "../../src/styles/globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { Manrope } from "next/font/google";
 import { notFound } from "next/navigation";
-import { ReadyToStartSection } from "@/src/sections/Layout";
+import { Footer, Header, ReadyToStartSection } from "@/src/sections/Layout";
 
 const manrope = Manrope({ subsets: ["latin"] });
 

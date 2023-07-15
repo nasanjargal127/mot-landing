@@ -25,7 +25,7 @@ const TransactionSection: React.FC<TransactionSectionProps> = () => {
   ];
 
   return (
-    <SectionContainer sectionClassName="py-28 bg-white">
+    <SectionContainer id="transaction" sectionClassName="py-28 bg-white">
       <GrayContainer className="py-12 px-2 lg:px-12 xl:justify-between">
         <div className="flex flex-col max-w-xl md:flex-1">
           <span className="flex flex-row flex-wrap">

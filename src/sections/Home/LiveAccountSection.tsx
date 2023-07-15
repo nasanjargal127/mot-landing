@@ -27,7 +27,10 @@ const LiveAccountSection: React.FC<LiveAccountSectionProps> = () => {
             <Button>{translation("registerBtnText")}</Button>
           </div>
         </motion.div>
-        <div className="flex flex-col sm:flex-row justify-center lg:pt-2 gap-8 w-full lg:flex-1 items-center ">
+        <motion.div
+          variants={scrollAnimation}
+          className="flex flex-col sm:flex-row justify-center lg:pt-2 gap-8 w-full lg:flex-1 items-center "
+        >
           <AccountCard
             idx={1}
             img="/images/pic/pro.jpg"
@@ -44,7 +47,7 @@ const LiveAccountSection: React.FC<LiveAccountSectionProps> = () => {
             commision="0"
             spread="Starts from 0.3"
           />
-        </div>
+        </motion.div>
       </ScrollAnimationWrapper>
     </SectionContainer>
   );
@@ -63,19 +66,30 @@ interface AccountCardProps {
 
 function AccountCard({ idx, img, name, commision, spread, platform, link }: AccountCardProps) {
   const translation = useTranslations("liveAccounts");
+  const variants = {
+    hover: {
+      y: -10,
+      boxShadow:
+        " 0 0 10px rgba(255, 162, 51, 0.2), 0 0 20px rgba(255, 162, 51, 0.2), 0 0 30px rgba(255, 162, 51, 0.2), 0 0 40px rgba(255, 162, 51, 0.2)",
+    },
+    rest: {
+      y: 0,
+      boxShadow: "0px 0px 0px rgba(255, 162, 51, 0.0)",
+    },
+  };
+
   return (
     <motion.div
-      variants={scrollAnimation}
       custom={{ duration: idx * 2 }}
-      whileHover={{
-        scale: 1.05,
-        transition: { duration: 0.35 },
-        boxShadow: "0px 0px 8px rgba(255, 162, 51, 0.5)",
-      }}
+      whileHover="hover"
+      initial="rest"
+      animate="rest"
       className={
         `max-w-sm border-[2px] rounded-2xl overflow-hidden flex-1 ` +
-        (idx % 2 !== 0 ? " primary-glow border-primary" : " border-darkText ")
+        (idx % 2 !== 0 ? " border-primary" : " border-darkText ")
       }
+      transition={{ duration: 0.35 }}
+      variants={variants}
     >
       <Image src={img} alt="item" width={560} height={180} sizes="100%" className="object-fit" />
       <div className="flex flex-col mx-8 my-6">

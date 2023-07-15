@@ -78,6 +78,16 @@
     "startTrade": "Start trading",
     "demoAccount": "Open demo account"
   },
+  "tradePage": {
+    "tradeAccount": "Trading Account",
+    "accountDesc": " Be it Scalper, Day Trader, Swing Trader, Bot Trader, EA Trader, or Position Trader, we have suitable trading account options for you. If you are a Scalper, Day Trader, Bot Trader, or EA Trader who trades with high lots, the spread is low. Then choose our PRO account with a very low spread and low commission.",
+    "market": "Market",
+    "marketDesc": "We offer 2000+ FX Pairs, CFDs, Stocks, Stocks, Metals, Oil, Indices, Cryptocurrencies, etc. All trading options are available.",
+    "price": "Price",
+    "priceDesc": "MOTFX broker executes orders in 15 milliseconds through electronic order fulfillment agents connected to the interbank system, where major banks, funds, and traders of the world trade with each other, so it delivers the lowest possible interest rate difference and fees to its customers.",
+    "btnTrade": "Trade",
+    "btnAccount": "Open Account"
+  },
   "stepsSection": {
     "title": "Follow the 4 steps below and start trading within 24 hours.",
     "register": "Register",
