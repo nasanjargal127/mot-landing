@@ -68,7 +68,14 @@ const Trade: React.FC<TradeProps> = () => {
       ) : (
         <></>
       )}
-      {tab === URL_TRADE_SPREAD ? <SpreadSection /> : <></>}
+      {tab === URL_TRADE_SPREAD ? (
+        <>
+          <SpreadSection />
+          <StepsSection />
+        </>
+      ) : (
+        <></>
+      )}
     </PageWithHeaderContainer>
   );
 };

@@ -23,7 +23,7 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
 
   return (
     <>
-      <SectionContainer id="live-price" sectionClassName="bg-white py-32">
+      <SectionContainer id="live-price" sectionClassName="bg-white py-24">
         <ScrollAnimationWrapper className="w-full" viewPortAmount={0.1}>
           <motion.div variants={scrollAnimation}>
             <TitleContainer className="md:justify-center mb-12">
@@ -36,7 +36,7 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
           </motion.div>
         </ScrollAnimationWrapper>
       </SectionContainer>
-      <SectionContainer id="spread-table" sectionClassName="bg-silver py-32 text-customGray">
+      <SectionContainer id="spread-table" sectionClassName="bg-silver py-24 text-customGray">
         <ScrollAnimationWrapper>
           <motion.div variants={scrollAnimation} className="py">
             <TitleContainer className="md:justify-center mb-12">
@@ -257,9 +257,9 @@ function Icon({ id, open }: { id: number; open: number }) {
       <path
         d="M20.006 14.1666L20.006 25.8333M20.006 25.8333L25.8394 20M20.006 25.8333L14.1727 20"
         stroke="#0B2B42"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <rect
         x="39.0059"
