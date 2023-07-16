@@ -45,7 +45,11 @@ const MetaTrader5: React.FC<MetaTrader5Props> = () => {
           </div>
         </motion.div>
         <motion.div variants={scrollAnimation} className="relative pb-10  place-items-center">
-          <img className="rounded-xl min-w-full h-full" src="/images/decoration/platformMt5.png" alt="App screenshot" />
+          <img
+            className="rounded-xl min-w-full h-full"
+            src="/images/decoration/platformMetaTrader.png"
+            alt="App screenshot"
+          />
         </motion.div>
       </ScrollAnimationWrapper>
     </SectionContainer>
