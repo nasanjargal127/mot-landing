@@ -14,7 +14,6 @@ import { URL_BROKER_LOGIN } from "@/src/constants/path";
 type SpreadSectionProps = {};
 
 const SpreadSection: React.FC<SpreadSectionProps> = () => {
-  const [selectedTab, setSelectedTab] = useState<number>(0);
   const [response, setResponse] = useState<ExistingData | null>(null);
 
   const router = useRouter();
@@ -63,71 +62,17 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
     return tradePairs;
   }
 
-  const tableHeaders = ["Symbols", "Spread", "Bid", " Ask", ""];
-  const pairTypes = ["Popular", "FX", "Metals/Energy", "Indices", "Crypto"];
-  const TradePairs = response ? updateTradePairs(TRADEPAIRS, response) : TRADEPAIRS;
+  const tradePairs = response ? updateTradePairs(TRADEPAIRS, response) : TRADEPAIRS;
 
   return (
     <SectionContainer sectionClassName="bg-white" divClassname="py-28">
-      <GrayContainer className="py-12 px-2 lg:px-12 ">
-        <div className="lg:mr-8 overflow-x-auto shadow-lg xl:shadow-none lg:flex-1">
-          <div className="w-fit flow-root rounded-md bg-white xl:shadow-lg ">
-            <div className="flex pl-4 sm:justify-start">
-              {pairTypes.map((item, idx) => (
-                <p
-                  className={` z-2 py-5 px-3 text-sm text-center font-medium ${
-                    idx === selectedTab ? "text-primary" : "text-gray-400"
-                  } bg-white cursor-pointer`}
-                  key={idx}
-                  onClick={() => setSelectedTab(idx)}
-                >
-                  {item}
-                </p>
-              ))}
-            </div>
-            <table>
-              <thead>
-                <tr className="pl-8">
-                  {tableHeaders.map((item, idx) => (
-                    <th
-                      key={idx}
-                      scope="col"
-                      className="sticky top-0 z-2 py-4 px-7 text-center text-sm font-semibold text-customGray bg-gray-200 -mx-1  pl-9 w-200"
-                    >
-                      {item}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                {TradePairs.filter((opt) => opt.id === selectedTab).map((items) =>
-                  items.data.map((item, idx) => (
-                    <tr key={idx} className="text-center">
-                      <td className="whitespace-nowrap py-4 text-sm font-bold text-gray-800 w-250">{item.name}</td>
-                      <td className="whitespace-nowrap py-4 text-base text-gray-500 w-200">{item.spread}</td>
-                      <td className="whitespace-nowrap py-4 text-base text-gray-500 sm:pr-0 w-200">{item.bid}</td>
-                      <td className="whitespace-nowrap py-4 text-base text-gray-500 sm:pr-0 w-200">{item.ask}</td>
-                      <td className="whitespace-nowrap py-4 pl-4 text-base text-gray-500 sm:pr-8 w-200">
-                        <button
-                          type="submit"
-                          onClick={() => router.push(URL_BROKER_LOGIN)}
-                          className="flex-none rounded-full bg-gradient-to-r from-[#FFA233] to-[#FFC81A] px-3 py-2 text-sm font-semibold text-white hover:text-gray-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
-                        >
-                          {componentTranslation("trade")}
-                        </button>
-                      </td>
-                    </tr>
-                  )),
-                )}
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <GrayContainer className="py-12 px-2 lg:px-12 gap-8">
+        <TradePairsTable tradePairs={tradePairs} className="hidden xl:inline" />
         <div className="flex lg:flex-1">
-          <div className=" text-center lg:text-left mt-20 lg:mt-0">
+          <div className="text-left mt-20 lg:mt-0">
             <h2 className="text-3xl font-extrabold tracking-tight text-customGray">{componentTranslation("title")}</h2>
             <p className="my-8 text-lg text-customGray font-light">{componentTranslation("desc")}</p>
-            <div className="py-2 flex items-center flex-wrap justify-center gap-4 lg:justify-start">
+            <div className="py-2 flex justify-start items-center flex-wrap lg:justify-center gap-4 lg:justify-start">
               <Button
                 className={`${CustomStyles.animations.hoverScale} px-5 text-base font-semibold text-darkSecondary`}
                 onClick={() => router.push(URL_BROKER_LOGIN)}
@@ -143,12 +88,79 @@ const SpreadSection: React.FC<SpreadSectionProps> = () => {
             </div>
           </div>
         </div>
+        <TradePairsTable tradePairs={tradePairs} className="xl:hidden" />
       </GrayContainer>
     </SectionContainer>
   );
 };
 export default SpreadSection;
 
+function TradePairsTable({ tradePairs, className }: { tradePairs: any; className?: string }) {
+  const [selectedTab, setSelectedTab] = useState<number>(0);
+  const router = useRouter();
+
+  const tableHeaders = ["Symbols", "Spread", "Bid", " Ask", ""];
+  const pairTypes = ["Popular", "FX", "Metals/Energy", "Indices", "Crypto"];
+  const componentTranslation = useTranslations("homeSpreadSection");
+
+  return (
+    <div className={`${className} lg:mr-8 overflow-x-auto shadow-lg xl:shadow-none lg:flex-1`}>
+      <div className="w-fit flow-root rounded-md bg-white xl:shadow-lg ">
+        <div className="flex pl-4 sm:justify-start">
+          {pairTypes.map((item, idx) => (
+            <p
+              className={` z-2 py-5 px-3 text-sm text-center font-medium ${
+                idx === selectedTab ? "text-primary" : "text-gray-400"
+              } bg-white cursor-pointer`}
+              key={idx}
+              onClick={() => setSelectedTab(idx)}
+            >
+              {item}
+            </p>
+          ))}
+        </div>
+        <table>
+          <thead>
+            <tr className="pl-8">
+              {tableHeaders.map((item, idx) => (
+                <th
+                  key={idx}
+                  scope="col"
+                  className="sticky top-0 z-2 py-4 px-7 text-center text-sm font-semibold text-customGray bg-gray-200 -mx-1  pl-9 w-200"
+                >
+                  {item}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="divide-y">
+            {tradePairs
+              .filter((opt: any) => opt.id === selectedTab)
+              .map((items: any) =>
+                items.data.map((item: any, idx: number) => (
+                  <tr key={idx} className="text-center">
+                    <td className="whitespace-nowrap py-4 text-sm font-bold text-gray-800 w-250">{item.name}</td>
+                    <td className="whitespace-nowrap py-4 text-base text-gray-500 w-200">{item.spread}</td>
+                    <td className="whitespace-nowrap py-4 text-base text-gray-500 sm:pr-0 w-200">{item.bid}</td>
+                    <td className="whitespace-nowrap py-4 text-base text-gray-500 sm:pr-0 w-200">{item.ask}</td>
+                    <td className="whitespace-nowrap py-4 pl-4 text-base text-gray-500 sm:pr-8 w-200">
+                      <button
+                        type="submit"
+                        onClick={() => router.push(URL_BROKER_LOGIN)}
+                        className="flex-none rounded-full bg-gradient-to-r from-[#FFA233] to-[#FFC81A] px-3 py-2 text-sm font-semibold text-white hover:text-gray-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                      >
+                        {componentTranslation("trade")}
+                      </button>
+                    </td>
+                  </tr>
+                )),
+              )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
 interface PairData {
   name: string;
   bid: string;

@@ -21,6 +21,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ img, title, desc, btnText
 
   return (
     <SectionContainer
+      id="header"
       sectionClassName="relative bg-mainGray h-[578px]"
       divClassname="isolate flex items-center justify-center h-full pt-12"
     >

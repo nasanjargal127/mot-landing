@@ -44,55 +44,55 @@ const Header: React.FC<HeaderProps> = () => {
   const navbarRoutes: NavbarRoutesProps[] = [
     {
       name: navbarContent("trade"),
-      href: "/trade?nextpage=accounts",
+      href: "/trade?nextpage=accounts/",
       sublinks: [
         {
           name: navbarContent("tradeAccount"),
-          href: "/trade?nextpage=accounts",
+          href: "/trade?nextpage=accounts#header/",
         },
         {
           name: navbarContent("market"),
-          href: "/trade?nextpage=market",
+          href: "/trade?nextpage=market#header/",
         },
         {
           name: navbarContent("priceSpread"),
-          href: "/trade?nextpage=spread",
+          href: "/trade?nextpage=spread#header/",
         },
       ],
     },
     {
       name: navbarContent("platform"),
-      href: "/platform?nextpage=mt5",
+      href: "/platform?nextpage=mt5#header",
       sublinks: [
         {
           name: navbarContent("mt5"),
-          href: "/platform?nextpage=mt5",
+          href: "/platform?nextpage=mt5#header",
         },
         {
           name: navbarContent("ctrader"),
-          href: "/platform?nextpage=ctrader",
+          href: "/platform?nextpage=ctrader#header",
         },
         {
           name: navbarContent("tradingHour"),
-          href: "/platform?nextpage=trading-hours",
+          href: "/platform?nextpage=trading-hours#header",
         },
         {
           name: navbarContent("demoAccount"),
-          href: "/platform?nextpage=demo-accounts",
+          href: "/platform?nextpage=demo-accounts#header",
         },
       ],
     },
     {
       name: navbarContent("support"),
-      href: "/support?nextpage=contact-us",
+      href: "/support?nextpage=contact-us#header",
       sublinks: [
         {
           name: navbarContent("contactUs"),
-          href: "/support?nextpage=contact-us",
+          href: "/support?nextpage=contact-us#header",
         },
         {
           name: navbarContent("partner"),
-          href: "/support?nextpage=partner",
+          href: "/support?nextpage=partner#header",
         },
       ],
     },
@@ -218,6 +218,7 @@ const slideInAnimation = {
 const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navbarRoutes, loginText, register }: MobileMenuProps) => {
   const [openDropdown, setOpenDropdown] = useState<null | number>(null);
   const localizeHref = useLocalizeHref();
+  const router = useRouter();
 
   return (
     <AnimatePresence>
@@ -232,9 +233,13 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navbarRoutes, login
             variants={slideInAnimation}
           >
             <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5 select-none">
-                <div className="w-32 h-10"></div>
-              </a>
+              <button
+                onClick={() => {
+                  router.push(localizeHref("/#hero"));
+                  setIsMobileMenuOpen(false);
+                }}
+                className="-m-3 p-1.5 select-none w-24 h-2"
+              ></button>
               <button type="button" className="-m-2.5 rounded-md p-2.5 " onClick={() => setIsMobileMenuOpen(false)}>
                 <span className="sr-only">Close menu</span>
                 <div className="h-6 w-6" aria-hidden="true" />

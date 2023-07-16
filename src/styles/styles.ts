@@ -12,7 +12,7 @@ export const CustomStyles = {
     hoverScale: "hover:scale-105 duration-200",
   },
   text: {
-    title: "text-3xl sm:text-4xl font-extrabold leading-9 ",
+    title: "text-2xl sm:text-4xl font-extrabold leading-9 ",
     gradient: " bg-gradient-to-r from-[#FFA233] to-[#FFC81A] text-transparent bg-clip-text ",
   },
   card: {

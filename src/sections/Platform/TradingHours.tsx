@@ -113,7 +113,7 @@ const TradingHours: React.FC<TradingHoursProps> = () => {
               className="rounded-2xl pt-6 px-2 sm:pt-8 sm:px-8 pb-12 text-sm leading-6 flex flex-col justify-center items-center"
             >
               <img className="h-[120px] w-[120px] text-mainColor " src={item.img} alt="testimonial" />
-              <p className="text-2xl text-customGray text-left font-extrabold mt-6">
+              <p className="text-base lg:text-2xl text-customGray text-center font-extrabold mt-6">
                 {item.title} ({item.timezone})
               </p>
               <blockquote

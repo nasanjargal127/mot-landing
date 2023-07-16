@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = () => {
       links: [
         {
           name: footerLinkTranslation("helpCenter"),
-          href: localizeHref("https://help.motforex.com"),
+          href: localizeHref("/support?nextpage=contact-us#header"),
         },
         {
           name: footerLinkTranslation("partnerWithUs"),
@@ -81,7 +81,7 @@ const Footer: React.FC<FooterProps> = () => {
         },
         {
           name: footerLinkTranslation("privacy"),
-          href: localizeHref("/privacy-policy"),
+          href: "/pdf/PrivacyPolicy.pdf",
         },
       ],
     },

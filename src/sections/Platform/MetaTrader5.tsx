@@ -9,11 +9,13 @@ import { useTranslations } from "next-intl";
 import { IconText } from "@/src/components/ui/IconText";
 import { Button } from "@/src/components/ui/Buttons";
 import { CustomStyles } from "@/src/styles/styles";
+import { useRouter } from "next/navigation";
 
 type MetaTrader5Props = {};
 
 const MetaTrader5: React.FC<MetaTrader5Props> = () => {
   const translation = useTranslations("metaTraderInfo");
+  const router = useRouter();
 
   return (
     <SectionContainer id="mt5" sectionClassName="bg-white py-32">
@@ -34,11 +36,21 @@ const MetaTrader5: React.FC<MetaTrader5Props> = () => {
             <IconText title={translation("feature7")} />
           </div>
           <div className="flex items-center justify-center gap-x-6 lg:justify-start text-customGray mt-16">
-            <Button isOutlined size={10} className="px-10 ring-primary font-semibold ">
+            <Button
+              onClick={() => router.push("https://apps.apple.com/us/app/metatrader-5/id413251709")}
+              isOutlined
+              size={10}
+              className="px-10 ring-primary font-semibold "
+            >
               <img src="/images/logo/apple.png" className="h-4 mr-2" alt="app store" />
               Apple
             </Button>
-            <Button isOutlined size={10} className="px-6 ring-primary font-semibold ">
+            <Button
+              onClick={() => router.push("https://play.google.com/store/search?q=metatrader+5&c=apps")}
+              isOutlined
+              size={10}
+              className="px-6 ring-primary font-semibold "
+            >
               <img src="/images/logo/google.png" className="h-4 mr-2" alt="play store" />
               Google Play
             </Button>

@@ -26,7 +26,7 @@ const PlatformSection: React.FC<PlatformSectionProps> = () => {
         <motion.div variants={scrollAnimation} className="flex flex-col justify-start items-start my-12">
           <div className={`${CustomStyles.text.title} flex flex-wrap`}>
             <h2 className="text-white">{translation("firstTitle")}</h2>
-            <h2 className={`${CustomStyles.text.gradient} pl-1.5`}>{translation("secondTitle")}</h2>
+            <h2 className={`${CustomStyles.text.gradient} xs:pl-1.5`}>{translation("secondTitle")}</h2>
           </div>
           <div className="py-6 md:py-8 text-base text-slate-100">{translation("description")}</div>
           <div className="w-full">
