@@ -54,7 +54,6 @@ async function RootLayout({ children, params }: { children: React.ReactNode; par
         <NextIntlClientProvider locale={params.locale} messages={messages}>
           <Header />
           {children}
-          <ReadyToStartSection />
           <Footer />
         </NextIntlClientProvider>
       </body>

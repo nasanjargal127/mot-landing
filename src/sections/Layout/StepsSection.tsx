@@ -36,7 +36,7 @@ const StepsSection: React.FC<StepsSectionProps> = () => {
   ];
 
   return (
-    <SectionContainer id="steps" sectionClassName=" py-20 bg-gradient-to-t from-darkSecondary to-[#03273f] ">
+    <section className="w-full">
       <div className="mx-auto max-w-4xl text-center my-8">
         <h2 className={`${CustomStyles.text.title}  text-white`}>{translation("title")}</h2>
       </div>
@@ -60,7 +60,7 @@ const StepsSection: React.FC<StepsSectionProps> = () => {
           </motion.div>
         ))}
       </ScrollAnimationWrapper>
-    </SectionContainer>
+    </section>
   );
 };
 export default StepsSection;

@@ -9,7 +9,6 @@ import { useLocalizeHref } from "@/src/components/utils";
 import { useSearchParams } from "next/navigation";
 import { URL_BROKER_REGISTER, URL_TRADE_ACCOUNTS, URL_TRADE_MARKET, URL_TRADE_SPREAD } from "@/src/constants/path";
 import { AccountTable, MarketSection, SpreadSection, TradingAccounts } from "@/src/sections/Trade";
-import { StepsSection } from "@/src/sections/Layout";
 import AccountDetails from "@/src/sections/Trade/AccountDetails";
 
 type TradeProps = {};
@@ -55,7 +54,6 @@ const Trade: React.FC<TradeProps> = () => {
         <>
           <TradingAccounts />
           <AccountTable />
-          <StepsSection />
         </>
       ) : (
         <></>
@@ -71,7 +69,6 @@ const Trade: React.FC<TradeProps> = () => {
       {tab === URL_TRADE_SPREAD ? (
         <>
           <SpreadSection />
-          <StepsSection />
         </>
       ) : (
         <></>

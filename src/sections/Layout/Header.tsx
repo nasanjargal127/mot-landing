@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
+import React, { Dispatch, ReactNode, SetStateAction, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CustomStyles } from "@/src/styles/styles";
 import { Dialog } from "@headlessui/react";
@@ -44,19 +44,19 @@ const Header: React.FC<HeaderProps> = () => {
   const navbarRoutes: NavbarRoutesProps[] = [
     {
       name: navbarContent("trade"),
-      href: "/trade?nextpage=accounts/",
+      href: "/trade?nextpage=accounts",
       sublinks: [
         {
           name: navbarContent("tradeAccount"),
-          href: "/trade?nextpage=accounts#header/",
+          href: "/trade?nextpage=accounts#header",
         },
         {
           name: navbarContent("market"),
-          href: "/trade?nextpage=market#header/",
+          href: "/trade?nextpage=market#header",
         },
         {
           name: navbarContent("priceSpread"),
-          href: "/trade?nextpage=spread#header/",
+          href: "/trade?nextpage=spread#header",
         },
       ],
     },
@@ -93,6 +93,10 @@ const Header: React.FC<HeaderProps> = () => {
         {
           name: navbarContent("partner"),
           href: "/support?nextpage=partner#header",
+        },
+        {
+          name: navbarContent("helpCenter"),
+          href: "/support?nextpage=help-center",
         },
       ],
     },
@@ -152,7 +156,7 @@ export default Header;
 const linkStyles = (isActive: boolean) =>
   `${
     isActive ? "text-primary " : " "
-  }text-base font-light cursor-pointer flex items-center  h-full hover:text-primary dark:hover:text-darkPrimary`;
+  } text-base font-light cursor-pointer flex items-center  h-full hover:text-primary dark:hover:text-darkPrimary`;
 
 const caretStyles = (isActive: boolean) =>
   `${

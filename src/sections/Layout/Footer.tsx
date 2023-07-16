@@ -14,7 +14,15 @@ import Link from "next/link";
 import React from "react";
 import { MdMailOutline } from "react-icons/md";
 import { useLocalizeHref } from "../../components/utils";
-import { URL_BROKER_REGISTER } from "@/src/constants/path";
+import {
+  URL_BROKER_REGISTER,
+  URL_SUPPORT_CONTACT_US,
+  URL_TRADE_ACCOUNTS,
+  URL_TRADE_SPREAD,
+} from "@/src/constants/path";
+import ReadyToStartSection from "./ReadyToStartSection";
+import StepsSection from "./StepsSection";
+import { usePathname, useSearchParams } from "next/navigation";
 
 type FooterProps = {};
 
@@ -23,6 +31,9 @@ const Footer: React.FC<FooterProps> = () => {
   const riskWarningTranslation = useTranslations("riskWarning");
   const infotTranslation = useTranslations("infos");
   const localizeHref = useLocalizeHref();
+  const searchParams = useSearchParams();
+  const tab = searchParams.get("nextpage");
+  const pathname = usePathname();
 
   const FooterLinks = [
     {
@@ -109,14 +120,24 @@ const Footer: React.FC<FooterProps> = () => {
       icon: RiTelegramFill,
     },
   ];
+  console.log(pathname);
 
   return (
-    <footer
-      id="footer"
-      className={`${CustomStyles.section} relative bg-darkSecondary`}
-      aria-labelledby="footer-heading"
-    >
+    <footer id="footer" className={`w-full z-10 relative overflow-hidden`} aria-labelledby="footer-heading">
+      <img
+        alt="footerbg"
+        src="/images/decoration/footerBackground.jpg"
+        className="absolute w-full h-full z-[-10] top-0 object-cover object-center"
+      />
       <div className={`${CustomStyles.container} py-16`}>
+        {pathname === "/" ? <StepsSection /> : <></>}
+        {pathname === "/platform" ? <StepsSection /> : <></>}
+
+        {tab === URL_TRADE_ACCOUNTS ? <StepsSection /> : <></>}
+        {tab === URL_TRADE_SPREAD ? <StepsSection /> : <></>}
+        {tab === URL_SUPPORT_CONTACT_US ? <StepsSection /> : <></>}
+
+        <ReadyToStartSection />
         <div className="flex justify-between flex-wrap sm:flex-nowrap">
           <div className=" mb-4 flex flex-col gap-4 text-sm  text-slate-50">
             <div className="flex justify-between items-center">

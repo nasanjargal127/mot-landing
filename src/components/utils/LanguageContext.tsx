@@ -37,7 +37,7 @@ const LanguageContext: React.FC<LanguageContextProps> = () => {
     items-center justify-center h-10 w-10 text-white blue-glow"
     >
       <Link href={redirectPath} locale="mn">
-        {locale.toLocaleUpperCase()}
+        {locale.toLocaleUpperCase() === 'EN' ? 'MN' : 'EN'}
       </Link>
     </div>
   );

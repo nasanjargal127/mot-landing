@@ -13,7 +13,6 @@ import {
 } from "@/src/constants/path";
 import { CTrader, DemoAccount, MetaTrader5, TradingHours } from "@/src/sections/Platform";
 import AccountDetails from "@/src/sections/Trade/AccountDetails";
-import { StepsSection } from "@/src/sections/Layout";
 
 type PlatformProps = {};
 
@@ -73,7 +72,6 @@ function Platform({}: PlatformProps) {
         <></>
       )}
       {tab === URL_PLATFORM_TRADING_HOURS ? <TradingHours /> : <></>}
-      <StepsSection />
     </PageWithHeaderContainer>
   );
 }

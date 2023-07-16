@@ -14,31 +14,26 @@ const ReadyToStartSection: React.FC<ReadyToStartSectionProps> = () => {
   const t = useTranslations("startComponent");
 
   return (
-    <section className={`${CustomStyles.section} bg-darkSecondary overflow-visible py-16`}>
-      <div
-        style={{ boxShadow: "0px 4px 35px 0px #FFA233" }}
-        className={`${CustomStyles.container} relative py-12 px-2 flex flex-col gap-6 rounded-3xl p-4 justify-center items-center `}
+    <section className={`w-full relative py-32 px-2 flex flex-col gap-6 rounded-3xl p-4 justify-center items-center `}>
+      <h3
+        className={`${CustomStyles.backgrounds.gradientBg} text-transparent bg-clip-text font-extrabold text-4xl md:text-5xl text-center w-fit h-14`}
       >
-        <h3
-          className={`${CustomStyles.backgrounds.gradientBg} text-transparent bg-clip-text font-extrabold text-4xl md:text-5xl text-center w-fit h-14`}
+        {t("title")}
+      </h3>
+      <p className="text-white text-lg text-center">{t("description")}</p>
+      <div className="flex items-center justify-center gap-4">
+        <Button
+          onClick={() => router.push(URL_BROKER_REGISTER)}
+          className={`${CustomStyles.animations.hoverScale} px-12 text-base font-semibold text-darkSecondary`}
         >
-          {t("title")}
-        </h3>
-        <p className="text-white text-lg text-center">{t("description")}</p>
-        <div className="flex items-center justify-center gap-4">
-          <Button
-            onClick={() => router.push(URL_BROKER_REGISTER)}
-            className={`${CustomStyles.animations.hoverScale} px-8 text-base font-semibold text-darkSecondary`}
-          >
-            {t("btnText")}
-          </Button>
-          <LinkButton
-            isOutlined
-            className={`${CustomStyles.animations.hoverScale} h-[42px] px-4 duration-200 hidden md:flex`}
-            href={`/platform?nextpage=mt5`}
-            text={t("tryForDemo")}
-          />
-        </div>
+          {t("btnText")}
+        </Button>
+        <LinkButton
+          isOutlined
+          className={`${CustomStyles.animations.hoverScale} bg-secondary h-[42px] px-4 duration-200 hidden md:flex`}
+          href={`/platform?nextpage=mt5`}
+          text={t("tryForDemo")}
+        />
       </div>
     </section>
   );

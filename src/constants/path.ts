@@ -9,6 +9,7 @@ export const URL_PLATFORM_DEMO_ACCOUT = "demo-accounts";
 
 export const URL_SUPPORT_CONTACT_US = "contact-us";
 export const URL_SUPPORT_PARTNER = "partner";
+export const URL_SUPPORT_HELP_CENTER = "help-center";
 
 export const URL_BROKER_LOGIN = "https://portal.motforex.com/auth/login";
 export const URL_BROKER_REGISTER = "https://portal.motforex.com/auth/register";
