@@ -7,7 +7,7 @@ interface Props {
   className?: string;
 }
 
-const ScrollAnimationWrapper = ({ children, className, viewPortAmount = 0.4, ...props }: Props) => {
+const ScrollAnimationWrapper = ({ children, className, viewPortAmount = 0.15, ...props }: Props) => {
   return (
     <motion.div
       initial="offscreen"
