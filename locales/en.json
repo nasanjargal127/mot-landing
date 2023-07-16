@@ -274,10 +274,14 @@
     "desc3": "When we accept your request and register as a PARTNER, a registration link will be generated in the PARTNER section of the USER DASHBOARD, which you can share with others."
   },
   "partnerWithUs": {
-    "title": "Partner With Us",
+    "title": "Become a partner",
     "part1": "If you are looking for a way to help others enter the forex stock market and achieve their financial goals while using the MOTFX broker, we offer you a PARTNER service. By becoming our PARTNER, you will be able to benefit from the trades of each registered user at your request.",
     "part2": "We will also offer you a variety of marketing tools and other things to help you promote the MOTFX broker to others, which you can use to distribute through your website, social media, and other marketing channels.",
     "part3": "We will provide detailed reports and other information about users registered as your offer and commission income from time to time."
+  },
+  "helpCenter": {
+    "title": "Help center",
+    "desc": "Our customer support center will solve all your problems without any delay. If you have any questions or problems, please contact us."
   },
   "stepsSection": {
     "title": "Follow the 4 steps below and start trading within 24 hours.",

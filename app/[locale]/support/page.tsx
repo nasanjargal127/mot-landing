@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation";
 import { URL_SUPPORT_CONTACT_US, URL_SUPPORT_PARTNER } from "@/src/constants/path";
 import { ContactUs } from "@/src/sections/Support";
 import PartnerWithUs from "@/src/sections/Support/PartnerWithUs";
+import PartnerRegister from "@/src/sections/Support/PartnerRegister";
 
 type pageProps = {};
 
@@ -41,7 +42,14 @@ const Support: React.FC<pageProps> = () => {
   return (
     <PageWithHeaderContainer pageData={supportPageItems}>
       {tab === URL_SUPPORT_CONTACT_US ? <ContactUs /> : <></>}
-      {tab === URL_SUPPORT_PARTNER ? <PartnerWithUs /> : <></>}
+      {tab === URL_SUPPORT_PARTNER ? (
+        <>
+          <PartnerWithUs />
+          <PartnerRegister />
+        </>
+      ) : (
+        <></>
+      )}
     </PageWithHeaderContainer>
   );
 };
