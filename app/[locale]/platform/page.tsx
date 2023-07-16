@@ -11,7 +11,7 @@ import {
   URL_PLATFORM_MT5,
   URL_PLATFORM_TRADING_HOURS,
 } from "@/src/constants/path";
-import { CTrader, DemoAccounts, MetaTrader5, TradingHours } from "@/src/sections/Platform";
+import { CTrader, DemoAccount, MetaTrader5, TradingHours } from "@/src/sections/Platform";
 import AccountDetails from "@/src/sections/Trade/AccountDetails";
 import { StepsSection } from "@/src/sections/Layout";
 
@@ -62,31 +62,18 @@ function Platform({}: PlatformProps) {
 
   return (
     <PageWithHeaderContainer pageData={platformPageItems}>
-      {tab === URL_PLATFORM_MT5 ? (
-        <>
-          <MetaTrader5 />
-          <StepsSection />
-        </>
-      ) : (
-        <></>
-      )}
-      {tab === URL_PLATFORM_CTRADER ? (
-        <>
-          <CTrader />
-          <StepsSection />
-        </>
-      ) : (
-        <></>
-      )}
+      {tab === URL_PLATFORM_MT5 ? <MetaTrader5 /> : <></>}
+      {tab === URL_PLATFORM_CTRADER ? <CTrader /> : <></>}
       {tab === URL_PLATFORM_DEMO_ACCOUT ? (
         <>
-          <DemoAccounts />
+          <DemoAccount />
           <AccountDetails />
         </>
       ) : (
         <></>
       )}
       {tab === URL_PLATFORM_TRADING_HOURS ? <TradingHours /> : <></>}
+      <StepsSection />
     </PageWithHeaderContainer>
   );
 }

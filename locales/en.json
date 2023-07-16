@@ -246,10 +246,8 @@
     "btnText": "Submit"
   },
   "tradingHours": {
-    "title": "Trading Hour",
-    "desc": "Forex, stock, and crypto markets are continuously traded 24/7, and all around the world, so you can trade anywhere and anytime.",
-    "subTitle": "Forex Trading Hours",
-    "subDesc": "The Forex market is open 24/5 due to the overlapping trading hours of the major stock exchanges, and when one market closes, the other opens. There are 4 main Forex trading markets:",
+    "title": "Forex Trading Hours",
+    "desc": "The Forex market is open 24/5 due to the overlapping trading hours of the major stock exchanges, and when one market closes, the other opens. There are 4 main Forex trading markets:",
     "hour": "hour"
   },
   "contactUs": {

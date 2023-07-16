@@ -52,7 +52,7 @@ const CTrader: React.FC<CTraderProps> = () => {
               Google Play
             </Button>
           </div>
-        </motion.div>{" "}
+        </motion.div>
       </ScrollAnimationWrapper>
     </SectionContainer>
   );
