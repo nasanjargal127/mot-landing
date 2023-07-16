@@ -17,6 +17,7 @@ import { useLocalizeHref } from "../../components/utils";
 import {
   URL_BROKER_REGISTER,
   URL_SUPPORT_CONTACT_US,
+  URL_SUPPORT_HELP_CENTER,
   URL_TRADE_ACCOUNTS,
   URL_TRADE_SPREAD,
 } from "@/src/constants/path";
@@ -120,7 +121,6 @@ const Footer: React.FC<FooterProps> = () => {
       icon: RiTelegramFill,
     },
   ];
-  console.log(pathname);
 
   return (
     <footer id="footer" className={`w-full z-10 relative overflow-hidden`} aria-labelledby="footer-heading">
@@ -130,12 +130,16 @@ const Footer: React.FC<FooterProps> = () => {
         className="absolute w-full h-full z-[-10] top-0 object-cover object-center"
       />
       <div className={`${CustomStyles.container} py-16`}>
-        {pathname === "/" ? <StepsSection /> : <></>}
-        {pathname === "/platform" ? <StepsSection /> : <></>}
-
-        {tab === URL_TRADE_ACCOUNTS ? <StepsSection /> : <></>}
-        {tab === URL_TRADE_SPREAD ? <StepsSection /> : <></>}
-        {tab === URL_SUPPORT_CONTACT_US ? <StepsSection /> : <></>}
+        {tab === URL_TRADE_ACCOUNTS ||
+        tab === URL_TRADE_SPREAD ||
+        tab === URL_SUPPORT_CONTACT_US ||
+        tab === URL_SUPPORT_HELP_CENTER ||
+        pathname === "/" ||
+        pathname === "/platform" ? (
+          <StepsSection />
+        ) : (
+          <></>
+        )}
 
         <ReadyToStartSection />
         <div className="flex justify-between flex-wrap sm:flex-nowrap">
@@ -172,9 +176,7 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
         </div>
-
         <div className="my-10 border-t border-white/10  lg:flex lg:items-center lg:justify-between" />
-
         <div className="px-2 grid grid-cols-2 gap-x-2 gap-y-12 md:gap-24 md:grid-cols-4 xl:mt-0">
           {FooterLinks.map((item, idx) => (
             <div key={idx}>
@@ -191,9 +193,7 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           ))}
         </div>
-
         <div className="my-10 border-t border-white/10  lg:flex lg:items-center lg:justify-between" />
-
         <h3 className="text-xl font-bold leading-8 md:text-lg md:leading-8 text-darkText">
           {riskWarningTranslation("title")}
         </h3>

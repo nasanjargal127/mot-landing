@@ -28,43 +28,11 @@ const ContactUs: React.FC<ContactUsProps> = () => {
           </motion.div>
           <motion.div variants={scrollAnimation} className="relative"></motion.div>
         </ScrollAnimationWrapper>
-      </SectionContainer>
-      <HelpCenterSection />
+      </SectionContainer>{" "}
     </>
   );
 };
 export default ContactUs;
-
-function HelpCenterSection() {
-  const router = useRouter();
-  const t = useTranslations("helpCenter");
-
-  return (
-    <div className="relative bg-mainGray w-[100vw] h-[507px]">
-      <div className="max-w-screen-xl mx-auto px-4 isolate flex justify-center h-full pt-8">
-        <img
-          src="/images/banner-web/zHelpCenter.jpg"
-          alt=""
-          className="absolute inset-0 -z-10 w-full h-full object-cover object-center"
-        />
-        <motion.div className="max-w-2xl flex flex-col justify-center items-center">
-          <h1 className="text-3xl mt-5 sm:mt-0 font-bold tracking-tight text-white sm:text-4xl text-center">
-            {t("title")}
-          </h1>
-          <p className=" my-4 sm:my-8 text-sm sm:text-base leading-5 sm:leading-6 text-white text-gray50 text-center">
-            {t("desc")}
-          </p>
-          <button
-            onClick={() => router.push(URL_BROKER_REGISTER)}
-            className="ring-2 ring-primary rounded-[14px] py-3 px-6 font-semibold leading-6 text-white hover:scale-110 duration-200"
-          >
-            Help center
-          </button>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
 
 function ContactUsForm() {
   const translation = useTranslations("contactUs");
