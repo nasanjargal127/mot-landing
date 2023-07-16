@@ -2,5 +2,3 @@
 
 - Image fixed
 - Text color fixed
-- edit
-- sleep
